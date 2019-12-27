@@ -1,0 +1,459 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>Project 5</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="../lib/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom fonts for this template -->
+    <link href="../lib/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css">
+    <link href="https://fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic" rel="stylesheet" type="text/css">
+
+    <!-- leafletjs for funny map -->
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.2.0/dist/leaflet.css"
+   integrity="sha512-M2wvCLH6DSRazYeZRIm1JnYyh22purTM+FDB5CsyxtQJYeKq83arPe5wgbNmcFXGqiSH2XR8dT/fJISVA1r/zQ=="
+   crossorigin=""/>
+    <script src="https://unpkg.com/leaflet@1.2.0/dist/leaflet.js"
+   integrity="sha512-lInM/apFSqyy1o6s89K4iQUKg6ppXEgsVxT35HbzUupEVRh2Eu9Wdl4tHj7dZO0s1uvplcYGmt3498TtHq+log=="
+   crossorigin=""></script>
+
+    <!-- Custom styles for this template -->
+    <link href="../css/freelancer.css" rel="stylesheet">
+
+  </head>
+
+  <body id="page-top">
+
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-light fixed-top" id="mainNav">
+      <div class="container">
+        <a class="navbar-brand js-scroll-trigger" href="../index.html">George Sun</a>
+        <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+          Menu
+          <i class="fa fa-bars"></i>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarResponsive">
+          <ul class="navbar-nav ml-auto">
+            <li class='nav-item'>
+              <a class="nav-link js-scroll-trigger" href="#page-top">HOME</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link js-scroll-trigger" href="#project-info">Project Info</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link js-scroll-trigger" href="#portfolio">Portfolio</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link js-scroll-trigger" href="#about">About</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Intro Heading -->
+    <section>
+      <header class="masthead">
+        <div class="container">
+          <!-- header image -->
+          <a href="">
+            <img id='photo-header' class="img-fluid img-circle" alt="">
+            <div class="intro-text">
+          </a>
+          <!-- header text -->
+          <div class="intro-text">
+            <span id='text-header' class="primary-text"></span>
+            <hr class="star-light">
+            <span id='details-header' class="secondary-text"></span>
+          </div>
+        </div>
+      </header>
+    </section>
+
+
+    <!-- ==============================================================- -->
+    <!--                         PROJECT CONTENT                         -->
+    <!-- ==============================================================- -->
+    <section id='project-info'>
+      <div class='container'>
+        <h2 class='text-center'>Project Info</h2>
+        <hr class="star-secondary">
+
+        <!-- board images -->
+        <div class='row py-4'>
+          <!-- first board -->
+          <h5>Class replica</h5>
+          <div class='row'>
+            <div class='col-lg-3'>
+              <img class='img-centered' src="./images/board-design/version0/schematic.png" width='110%'>
+            </div>
+            <div class='col-lg-3'>
+              <img class='img-centered' src="./images/board-design/version0/hello_world.png" width='80%'>
+            </div>
+            <div class='col-lg-3'>
+              <img class='img-centered' src="./images/boards/1.jpg" width='100%'>
+            </div>
+            <div class='col-lg-3'>
+              <p class='content-text'></p>
+            </div>
+          </div>
+
+          <!-- second board -->
+          <h5>Button and LED addition</h5>
+          <div class='row'>
+            <div class='col-lg-3'>
+              <img class='img-centered' src="./images/board-design/version1/schematic.png" width='110%'>
+            </div>
+            <div class='col-lg-3'>
+              <img class='img-centered' src="./images/board-design/version1/hello_world.png" width='90%' style='margin-top: 15%'>
+            </div>
+            <div class='col-lg-3'>
+              <img class='img-centered' src="./images/boards/2.jpg" width='100%' style='margin-top: 15%'>
+            </div>
+            <div class='col-lg-3'>
+              <p class='content-text'></p>
+            </div>
+          </div>
+
+          <!-- third board -->
+          <h5>TX and RX LED indicators</h5>
+          <div class='row'>
+            <div class='col-lg-3'>
+              <img class='img-centered' src="./images/board-design/version2/schematic.png" width='110%'>
+            </div>
+            <div class='col-lg-3'>
+              <img class='img-centered' src="./images/board-design/version2/hello_world.png" width='100%' style='margin-top: 15%'>
+            </div>
+            <div class='col-lg-3'>
+              <img class='img-centered' src="./images/boards/3.jpg" width='100%' style='margin-top: 15%'>
+            </div>
+            <div class='col-lg-3'>
+              <p class='content-text'></p>
+            </div>
+          </div>
+        </div>
+
+        <!--hello world response -->
+        <div class='row py-4'>
+          <div class='col-lg-6'>
+            <div class='row'>
+              <p class='content-text'></p>
+            </div> 
+            <div class='row'>
+              <img src="./images/oscope/hookup1.jpg" style="width:100%;height:20%">
+            </div>           
+          </div>
+          <div class='col-lg-6'>
+            <video controls autoplay loop width='100%' style='margin-top:2%'>
+              <source src="./videos/demo1-helloworld.mp4" type="video/mp4">
+            </video>
+            <img src="./images/hello-world/pyserial-implementation.jpg" width='100%' style='margin-top:5%'>
+          </div>
+        </div>
+
+        <!--setting up serial (TTL) measurement -->
+        <div class='row py-4'>
+          <!-- probe image -->
+          <div class='col-lg-3'>            
+            <div class='row'>
+              <img class='img-centered' src="./images/oscope/probes.jpg" style='width:100%; height:50%'>
+            </div>
+            <div class='row'>
+              <p class='content-text'></p>
+            </div>
+          </div>
+          <!-- TTL waveforms -->
+          <div class='col-lg-9'>
+            <!-- probe 1 -->
+            <div class='row'>
+              <div class='col-lg-4'>
+                <img class='img-centered' src="./images/oscope/TTL-1.jpg" style='height:100%'>
+              </div>
+              <div class='col-lg-4'>
+                <img class='img-centered' src="./images/oscope/TTL-2.jpg" style='height:100%'>
+              </div>
+              <div class='col-lg-4'>
+                <img class='img-centered' src="./images/oscope/TTL-3.jpg" style='height:100%'>
+              </div>
+            </div>
+            <!-- add a break -->
+            <br>
+            <!-- probe 2 -->
+            <div class='row'>
+              <div class='col-lg-4'>
+                <img class='img-centered' src="./images/oscope/TTL-1-small.jpg" style='height:100%'>
+              </div>
+              <div class='col-lg-4'>
+                <img class='img-centered' src="./images/oscope/TTL-2-small.jpg" style='height:100%'>
+              </div>
+              <div class='col-lg-4'>
+                <img class='img-centered' src="./images/oscope/TTL-3-small.jpg" style='height:100%'>
+              </div>
+            </div>
+          </div>
+        </div>       
+
+        <!--setting up serial (TTL) measurement -->
+        <div class='row py-4'>
+          <div class='col-lg-6'>
+            <h5>Hello World <span style='font-size: 16px'>(more bits?)</span></h5>
+            <video controls autoplay loop width='100%'>
+              <source src="./videos/probe1_hello_world.mp4" type="video/mp4">
+            </video>
+          </div>
+          <div class='col-lg-6'>
+            <h5>Hello World <span style='font-size: 16px'>(less bits?)</span></h5>
+            <video controls autoplay loop width='100%'>
+              <source src="./videos/probe2_hello_world.mp4" type="video/mp4">
+            </video>          
+          </div>
+        </div> 
+
+        <!-- simulating TTL letters to binary -->
+        <div class='row py-4'>
+          <p class='content-text'></p>
+          <div class='col-lg-12' data-toggle='tooltip' title='click to expand'>
+            <table class='table' style='margin:0px auto; width:50%; float:none' data-toggle='collapse' data-target='#table' style='cursor: pointer'>
+              <thead>
+                <tr>
+                  <th align='center' colspan=3>ASCII to HEX/BYTE</th>
+                </tr>
+                <tr>
+                  <th>Symbol</th>
+                  <th>Hex</th>
+                  <th>Byte</th>  
+                </tr>              
+              </thead>
+              <tbody id='table' class='collapse'>
+                <tr>
+                  <td>H</td>
+                  <td>48</td>
+                  <td>0001001000000000</td>
+                </tr>
+                <tr>
+                  <td>E</td>
+                  <td>45</td>
+                  <td>1010001000000000</td>
+                </tr>
+                <tr>
+                  <td>L</td>
+                  <td>4C</td>
+                  <td>0011001000000000</td>
+                </tr>
+                <tr>
+                  <td>L</td>
+                  <td>4C</td>
+                  <td>0011001000000000</td>
+                </tr>
+                <tr>
+                  <td>O</td>
+                  <td>4F</td>
+                  <td>1111001000000000</td>
+                </tr>
+                <tr>
+                  <td> </td>
+                  <td>5E</td>
+                  <td>0111101000000000</td>
+                </tr>
+                <tr>
+                  <td>W</td>
+                  <td>57</td>
+                  <td>1110101000000000</td>
+                </tr>
+                <tr>
+                  <td>O</td>
+                  <td>4F</td>
+                  <td>1111001000000000</td>
+                </tr>
+                <tr>
+                  <td>R</td>
+                  <td>52</td>
+                  <td>0100101000000000</td>
+                </tr>
+                <tr>
+                  <td>L</td>
+                  <td>4C</td>
+                  <td>0011001000000000</td>
+                </tr>
+                <tr>
+                  <td>D</td>
+                  <td>44</td>
+                  <td>0010001000000000</td>
+                </tr>              
+              </tbody>
+            </table>
+            <br>
+            <p class='content-text'></p>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- ==============================================================- -->
+    <!--                          END OF CONTENT                         -->
+    <!-- ==============================================================- -->
+
+    <!-- Portfolio Grid Section -->
+    <section id="portfolio">
+      <div class="container">
+        <h2 class="text-center">Portfolio</h2>
+        <hr class="star-secondary">
+        <div id='portfolio-items' class="row">
+        </div>
+      </div>
+    </section>
+
+    <!-- Final Project -->
+    <section id='final-project'>
+      <div class='container'>
+        <h2 class='text-center'>Final Project</h2>
+        <hr class='star-primary'>
+        <div class='row'>
+          <div class='col-lg-3'></div>
+          <div id='final-project-content' class='col-lg-6 portfolio-item'></div>         
+          <div class='col-lg-3'></div>
+        </div>        
+        <hr class='star-primary'>  
+      </div>
+    </section>    
+
+    <!-- About Section -->
+    <section class="success" id="about">
+      <div class="container">
+        <h2 class="text-center">About</h2>
+        <hr class="star-light">
+        <div class="row">
+          <div class="col-lg-5 ml-auto" style="text-align: justify">
+            <p class='about-text'></p>
+          </div>
+          <div class="col-lg-5 mr-auto" style="text-align: justify">
+            <p class='about-text'></p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="text-center">
+      <div class="footer-above">
+        <div class="container">
+          <div class="row">
+            <div class="footer-col col-md-4">
+              <h3>Where to find me</h3>
+              <div id='map' style='height:300px; width:350px'></div>
+            </div>
+            <div class="footer-col col-md-4">
+              <h3>Hobbies</h3>
+              <ul class="list-inline">
+                <li class="list-inline-item">
+                  <a class="btn-social btn-outline" href="#">
+                    <i class="fa fa-fw fa-fake"></i>
+                  </a>
+                </li>
+                <li class="list-inline-item">
+                  <a class="btn-social btn-outline" href="#">
+                    <i class="fa fa-fw fa-fake"></i>
+                  </a>
+                </li>
+                <li class="list-inline-item">
+                  <a class="btn-social btn-outline" href="#">
+                    <i class="fa fa-fw fa-fake"></i>
+                  </a>
+                </li>
+                <li class="list-inline-item">
+                  <a class="btn-social btn-outline" href="#">
+                    <i class="fa fa-fw fa-fake"></i>
+                  </a>
+                </li>
+                <li class="list-inline-item">
+                  <a class="btn-social btn-outline" href="#">
+                    <i class="fa fa-fw fa-fake"></i>
+                  </a>
+                </li>
+              </ul>
+            </div>
+            <div class="footer-col col-md-4">
+              <h3 id='contact-info'>Contact</h3>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="footer-below">
+        <div class="container">
+          <div class="row">
+            <div class="col-lg-12">
+              Copyright &copy; Sun Websites 2017
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <!-- Scroll to Top Button (Only visible on small and extra-small screen sizes) -->
+    <div class="scroll-top d-lg-none">
+      <a class="btn btn-primary js-scroll-trigger" href="#page-top">
+        <i class="fa fa-chevron-up"></i>
+      </a>
+    </div>
+
+    <!-- Bootstrap core JavaScript -->
+    <script src="../lib/jquery/jquery.min.js"></script>
+    <script src="../lib/popper/popper.min.js"></script>
+    <script src="../lib/bootstrap/js/bootstrap.min.js"></script>
+
+    <!-- Plugin JavaScript -->
+    <script src="../lib/jquery-easing/jquery.easing.min.js"></script>
+
+    <!-- Custom scripts for this template -->
+    <script src="../js/freelancer.min.js"></script>    
+
+    <!-- week related descriptions -->
+    <script src='../week1/content-description/description.js' type="text/javascript"></script>
+    <script src='../week2/content-description/description.js' type="text/javascript"></script>
+    <script src='../week3/content-description/description.js' type="text/javascript"></script>
+    <script src='../week4/content-description/description.js' type="text/javascript"></script>
+    <script src='../week5/content-description/description.js' type="text/javascript"></script>
+    <script src='../week6/content-description/description.js' type="text/javascript"></script>
+    <script src='../week7/content-description/description.js' type="text/javascript"></script>
+    <script src='../week8/content-description/description.js' type="text/javascript"></script>
+    <script src='../week9/content-description/description.js' type="text/javascript"></script>
+    <script src='../week10/content-description/description.js' type="text/javascript"></script>
+    <script src='../week11/content-description/description.js' type="text/javascript"></script>
+    <script src='../week12/content-description/description.js' type="text/javascript"></script>
+    <script src='../week13/content-description/description.js' type="text/javascript"></script>
+    <script src='../week14/content-description/description.js' type="text/javascript"></script>
+    <script src='../week-final/content-description/description.js' type="text/javascript"></script>
+    
+    <!-- user defined custom scripts -->
+    <script src='../js/user_defined_script.js'></script>
+
+    <!-- week specific javascript file(s) -->
+    <script src='./text.js'></script>
+    
+    <script>
+      $(function() {
+        var dir = ".."
+
+        // populate content
+        changePhotoHeader('week5', WEEK5, dir)
+        makePortfolio(weeks, weekOBJ, dir)
+        addFinalProject(dir)
+
+        // add page specific text
+        addContentText(TEXT)
+
+        // initialize tooltip
+        $('[data-toggle="tooltip"]').tooltip()
+      })
+    </script>
+
+  </body>
+</html>

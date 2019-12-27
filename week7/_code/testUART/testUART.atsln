@@ -1,0 +1,34 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Atmel Studio Solution File, Format Version 11.00
+VisualStudioVersion = 14.0.23107.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{54F91283-7BC4-4236-8FF9-10F437C3AD48}") = "testUART", "testUART\testUART.cproj", "{DCE6C7E3-EE26-4D79-826B-08594B9AD897}"
+EndProject
+Project("{54F91283-7BC4-4236-8FF9-10F437C3AD48}") = "test", "test\test.cproj", "{BB8DEBDC-77E0-4BFA-8E88-2A1E5D49285C}"
+EndProject
+Project("{54F91283-7BC4-4236-8FF9-10F437C3AD48}") = "LED", "LED\LED.cproj", "{DA48A5EE-D373-4ACE-A1AD-7E7E9638BD11}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|AVR = Debug|AVR
+		Release|AVR = Release|AVR
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{DCE6C7E3-EE26-4D79-826B-08594B9AD897}.Debug|AVR.ActiveCfg = Debug|AVR
+		{DCE6C7E3-EE26-4D79-826B-08594B9AD897}.Debug|AVR.Build.0 = Debug|AVR
+		{DCE6C7E3-EE26-4D79-826B-08594B9AD897}.Release|AVR.ActiveCfg = Release|AVR
+		{DCE6C7E3-EE26-4D79-826B-08594B9AD897}.Release|AVR.Build.0 = Release|AVR
+		{BB8DEBDC-77E0-4BFA-8E88-2A1E5D49285C}.Debug|AVR.ActiveCfg = Debug|AVR
+		{BB8DEBDC-77E0-4BFA-8E88-2A1E5D49285C}.Debug|AVR.Build.0 = Debug|AVR
+		{BB8DEBDC-77E0-4BFA-8E88-2A1E5D49285C}.Release|AVR.ActiveCfg = Release|AVR
+		{BB8DEBDC-77E0-4BFA-8E88-2A1E5D49285C}.Release|AVR.Build.0 = Release|AVR
+		{DA48A5EE-D373-4ACE-A1AD-7E7E9638BD11}.Debug|AVR.ActiveCfg = Debug|AVR
+		{DA48A5EE-D373-4ACE-A1AD-7E7E9638BD11}.Debug|AVR.Build.0 = Debug|AVR
+		{DA48A5EE-D373-4ACE-A1AD-7E7E9638BD11}.Release|AVR.ActiveCfg = Release|AVR
+		{DA48A5EE-D373-4ACE-A1AD-7E7E9638BD11}.Release|AVR.Build.0 = Release|AVR
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

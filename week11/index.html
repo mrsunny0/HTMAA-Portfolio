@@ -1,0 +1,406 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>Project 11</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="../lib/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom fonts for this template -->
+    <link href="../lib/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css">
+    <link href="https://fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic" rel="stylesheet" type="text/css">
+
+    <!-- leafletjs for funny map -->
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.2.0/dist/leaflet.css"
+   integrity="sha512-M2wvCLH6DSRazYeZRIm1JnYyh22purTM+FDB5CsyxtQJYeKq83arPe5wgbNmcFXGqiSH2XR8dT/fJISVA1r/zQ=="
+   crossorigin=""/>
+    <script src="https://unpkg.com/leaflet@1.2.0/dist/leaflet.js"
+   integrity="sha512-lInM/apFSqyy1o6s89K4iQUKg6ppXEgsVxT35HbzUupEVRh2Eu9Wdl4tHj7dZO0s1uvplcYGmt3498TtHq+log=="
+   crossorigin=""></script>
+
+   <!-- prism syntax highlighting -->
+   <link rel="stylesheet" type="text/css" href="../lib/prism/prism.css">
+
+    <!-- Custom styles for this template -->
+    <link href="../css/freelancer.css" rel="stylesheet">
+
+  </head>
+
+  <body id="page-top">
+
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-light fixed-top" id="mainNav">
+      <div class="container">
+        <a class="navbar-brand js-scroll-trigger" href="../index.html">George Sun</a>
+        <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+          Menu
+          <i class="fa fa-bars"></i>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarResponsive">
+          <ul class="navbar-nav ml-auto">
+            <li class='nav-item'>
+              <a class="nav-link js-scroll-trigger" href="#page-top">HOME</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link js-scroll-trigger" href="#project-info">Project Info</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link js-scroll-trigger" href="#portfolio">Portfolio</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link js-scroll-trigger" href="#about">About</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Intro Heading -->
+    <section>
+      <header class="masthead">
+        <div class="container">
+          <!-- header image -->
+          <a href="">
+            <img id='photo-header' class="img-fluid img-circle" alt="">
+            <div class="intro-text">
+          </a>
+          <!-- header text -->
+          <div class="intro-text">
+            <span id='text-header' class="primary-text"></span>
+            <hr class="star-light">
+            <span id='details-header' class="secondary-text"></span>
+          </div>
+        </div>
+      </header>
+    </section>
+
+    <!-- ==============================================================- -->
+    <!--                         PROJECT CONTENT                         -->
+    <!-- ==============================================================- -->
+    <section id='project-info'>
+      <!-- anchor for hyperlink -->
+      <a id='anchor-ATtiny' style='display:block;visibility:hidden;position:relative;top:-100px'></a>
+      <div class='container'>
+        <h2 class='text-center'>Project Info</h2>
+        <hr class="star-secondary">
+        
+	    	<div class='row py-4'>
+          <div class='col-lg-12'>
+            <h4>Making an 
+            <a href='http://www.atmel.com/images/atmel-2586-avr-8-bit-microcontroller-attiny25-attiny45-attiny85_datasheet.pdf'>ATtiny85V</a> 
+            Breakout Board</h4>
+          </div>
+          <div class='col-lg-8'>
+            <div class='row'>
+              <div class='col-lg-12'>
+                <p class='content-text'></p>
+              </div>
+            </div>
+            <div class='row'>
+              <div class='col-lg-6'>
+                <img src="./images/boards/AT85_breakout_schematic.png" width='100%'>
+              </div>
+              <div class='col-lg-6'>
+                <img src="./images/boards/AT85_breakout_layout.png" width='100%'>
+              </div>              
+            </div>
+          </div>
+          <div class='col-lg-4'>
+            <img src="./images/photos/breakout.jpg" width='100%'>
+          </div>                    
+        </div>
+
+        <div class='row py-4'>
+          <div class='col-lg-12'>
+            <h4 style='text-align: right'>Coding analog sensing</h4>
+          </div>
+          <div class='col-lg-12'>
+            <div class='row'>
+              <div class='col-lg-8'>
+                <pre class='line-numbers'>
+                  <code class='language-c'>
+                    <script>
+                      void initPWM ()
+                      {
+                        DDRB |= (1 << PB0) | (1 << PB1);
+                        TCCR0A =
+                        (1 << COM0A1) |    // set OC0A on compare match, clear at TOP
+                        (1 << COM0B1) |    // set OC0B on compare match, clear at TOP
+                        (1 << WGM01)  |    // fast PWM mode
+                        (1 << WGM00);
+
+                        TCCR0B = (1 << CS00);  // prescaler = 1
+                      }
+                    </script>
+                  </code>
+                </pre>
+              </div>
+              <div class='col-lg-4'>
+                <p class='content-text'></p>
+              </div>                       
+            </div>
+            <div class='row'>
+              <div class='col-lg-4'>
+                <p class='content-text'></p>
+              </div>
+
+              <div class='col-lg-8'>
+                <pre class='line-numbers'>
+                  <code class='language-c'>
+                    <script>
+                      volatile const uint8_t adc2 = (1<<ADLAR) | (1<<MUX1); // set up ADC
+
+                      void initADC ()
+                      {
+                        ADMUX =
+                        (1 << ADLAR) |     // left shift result
+                        (1 << MUX1);       // use ADC2 for input (PB4) (to start)
+
+                        ADCSRA =
+                        (1 << ADEN)  |     // Enable ADC
+                        (1 << ADATE) |     // auto trigger enable
+                        (1 << ADIE)  |     // enable ADC interrupt
+                        (1 << ADPS0) |     // Prescaler = 8
+                        (1 << ADPS1);      // - 125KHz with 1MHz clock
+
+                        ADCSRB = 0;      // free running mode
+                        ADCSRA |= (1 << ADSC); // start conversions
+                      }
+
+                      ISR(ADC_vect)
+                      {
+                        // read in 8 bit ADCH
+                      }
+                    </script>
+                  </code>
+                </pre>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class='row py-4'>
+          <div class='col-lg-12'>
+            <h4>Proof of Concept Demonstration</h4>
+          </div>
+          <div class='col-lg-6'>
+            <video autoplay loop controls width='100%'>
+              <source src="./videos/demoPWM.mp4" type="video/mp4">
+            </video>
+          </div>
+          <div class='col-lg-6'>
+            <p class='content-text'></p>
+          </div>
+        </div>
+
+        <div class='row py-4'>
+          <div class='col-lg-12'>
+            <h4>Making a pressure sensor</h4>
+          </div>
+          <div class='col-lg-3'>
+            <div class='row'>
+              <div class='col-lg-12'>
+                <img src="./images/sensor/traces-annotated.png" width='50%' class='img-centered'>
+              </div>            
+              <div class='col-lg-12'>
+                <p class='content-text'></p>
+              </div>
+            </div>            
+          </div>
+          <div class='col-lg-5'>
+            <video controls loop autoplay width='100%'>
+              <source src="./videos/vinyl-cut.mp4" type="video/mp4">
+            </video>
+          </div>
+          <div class='col-lg-4'>
+            <img src="./images/sensor/weeded.jpg" width='95%'>
+          </div>
+        </div>        
+
+        <div class='row'>
+          <div class='col-lg-3'>
+            <img src="./images/sensor/single-example-crop.jpg" width='100%'>
+          </div>
+          <div class='col-lg-5'>
+            <video controls loop autoplay width='100%'>
+              <source src="./videos/demoPressure.mp4" type="video/mp4">
+            </video>
+          </div>
+          <div class='col-lg-4'>
+            <p class='content-text'></p>
+          </div>
+        </div>
+
+      </div>
+    </section>
+    <!-- ==============================================================- -->
+    <!--                          END OF CONTENT                         -->
+    <!-- ==============================================================- -->
+
+    <!-- Portfolio Grid Section -->
+    <section id="portfolio">
+      <div class="container">
+        <h2 class="text-center">Portfolio</h2>
+        <hr class="star-secondary">
+        <div id='portfolio-items' class="row">
+        </div>
+      </div>
+    </section>
+
+    <!-- Final Project -->
+    <section id='final-project'>
+      <div class='container'>
+        <h2 class='text-center'>Final Project</h2>
+        <hr class='star-primary'>
+        <div class='row'>
+          <div class='col-lg-3'></div>
+          <div id='final-project-content' class='col-lg-6 portfolio-item'></div>         
+          <div class='col-lg-3'></div>
+        </div>        
+        <hr class='star-primary'>  
+      </div>
+    </section>    
+
+    <!-- About Section -->
+    <section class="success" id="about">
+      <div class="container">
+        <h2 class="text-center">About</h2>
+        <hr class="star-light">
+        <div class="row">
+          <div class="col-lg-5 ml-auto" style="text-align: justify">
+            <p class='about-text'></p>
+          </div>
+          <div class="col-lg-5 mr-auto" style="text-align: justify">
+            <p class='about-text'></p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="text-center">
+      <div class="footer-above">
+        <div class="container">
+          <div class="row">
+            <div class="footer-col col-md-4">
+              <h3>Where to find me</h3>
+              <div id='map' style='height:300px; width:350px'></div>
+            </div>
+            <div class="footer-col col-md-4">
+              <h3>Hobbies</h3>
+              <ul class="list-inline">
+                <li class="list-inline-item">
+                  <a class="btn-social btn-outline" href="#">
+                    <i class="fa fa-fw fa-fake"></i>
+                  </a>
+                </li>
+                <li class="list-inline-item">
+                  <a class="btn-social btn-outline" href="#">
+                    <i class="fa fa-fw fa-fake"></i>
+                  </a>
+                </li>
+                <li class="list-inline-item">
+                  <a class="btn-social btn-outline" href="#">
+                    <i class="fa fa-fw fa-fake"></i>
+                  </a>
+                </li>
+                <li class="list-inline-item">
+                  <a class="btn-social btn-outline" href="#">
+                    <i class="fa fa-fw fa-fake"></i>
+                  </a>
+                </li>
+                <li class="list-inline-item">
+                  <a class="btn-social btn-outline" href="#">
+                    <i class="fa fa-fw fa-fake"></i>
+                  </a>
+                </li>
+              </ul>
+            </div>
+            <div class="footer-col col-md-4">
+              <h3 id='contact-info'>Contact</h3>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="footer-below">
+        <div class="container">
+          <div class="row">
+            <div class="col-lg-12">
+              Copyright &copy; Sun Websites 2017
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <!-- Scroll to Top Button (Only visible on small and extra-small screen sizes) -->
+    <div class="scroll-top d-lg-none">
+      <a class="btn btn-primary js-scroll-trigger" href="#page-top">
+        <i class="fa fa-chevron-up"></i>
+      </a>
+    </div>
+
+    <!-- Bootstrap core JavaScript -->
+    <script src="../lib/jquery/jquery.min.js"></script>
+    <script src="../lib/popper/popper.min.js"></script>
+    <script src="../lib/bootstrap/js/bootstrap.min.js"></script>
+
+    <!-- Plugin JavaScript -->
+    <script src="../lib/jquery-easing/jquery.easing.min.js"></script>
+
+    <!-- Custom scripts for this template -->
+    <script src="../js/freelancer.min.js"></script>    
+
+    <!-- week related descriptions -->
+    <script src='../week1/content-description/description.js' type="text/javascript"></script>
+    <script src='../week2/content-description/description.js' type="text/javascript"></script>
+    <script src='../week3/content-description/description.js' type="text/javascript"></script>
+    <script src='../week4/content-description/description.js' type="text/javascript"></script>
+    <script src='../week5/content-description/description.js' type="text/javascript"></script>
+    <script src='../week6/content-description/description.js' type="text/javascript"></script>
+    <script src='../week7/content-description/description.js' type="text/javascript"></script>
+    <script src='../week8/content-description/description.js' type="text/javascript"></script>
+    <script src='../week9/content-description/description.js' type="text/javascript"></script>
+    <script src='../week10/content-description/description.js' type="text/javascript"></script>
+    <script src='../week11/content-description/description.js' type="text/javascript"></script>
+    <script src='../week12/content-description/description.js' type="text/javascript"></script>
+    <script src='../week13/content-description/description.js' type="text/javascript"></script>
+    <script src='../week14/content-description/description.js' type="text/javascript"></script>
+    <script src='../week-final/content-description/description.js' type="text/javascript"></script>
+    
+    <!-- prism js -->
+    <script src="../lib/prism/prism.js"></script>
+    
+    <!-- user defined custom scripts -->
+    <script src='../js/user_defined_script.js'></script>
+
+    <!-- week specific javascript file(s) -->
+    <script src='./text.js'></script>
+    
+    <script>
+      $(function() {
+        var dir = ".."
+
+        // populate content
+        changePhotoHeader('week11', WEEK11, dir)
+        makePortfolio(weeks, weekOBJ, dir)
+        addFinalProject(dir)
+
+        // add page specific text
+        addContentText(TEXT)
+
+        // initialize tooltip
+        $('[data-toggle="tooltip"]').tooltip()
+      })
+    </script>
+
+  </body>
+</html>

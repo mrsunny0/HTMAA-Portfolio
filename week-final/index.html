@@ -1,0 +1,1185 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>Final Project</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="../lib/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom fonts for this template -->
+    <link href="../lib/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css">
+    <link href="https://fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic" rel="stylesheet" type="text/css">
+
+    <!-- leafletjs for funny map -->
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.2.0/dist/leaflet.css"
+   integrity="sha512-M2wvCLH6DSRazYeZRIm1JnYyh22purTM+FDB5CsyxtQJYeKq83arPe5wgbNmcFXGqiSH2XR8dT/fJISVA1r/zQ=="
+   crossorigin=""/>
+    <script src="https://unpkg.com/leaflet@1.2.0/dist/leaflet.js"
+   integrity="sha512-lInM/apFSqyy1o6s89K4iQUKg6ppXEgsVxT35HbzUupEVRh2Eu9Wdl4tHj7dZO0s1uvplcYGmt3498TtHq+log=="
+   crossorigin=""></script>
+
+   <!-- prism syntax highlighting -->
+   <link rel="stylesheet" type="text/css" href="../lib/prism/prism.css">
+
+    <!-- Custom styles for this template -->
+    <link href="../css/freelancer.css" rel="stylesheet">
+
+  </head>
+
+  <body id="page-top">
+
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-light fixed-top" id="mainNav">
+      <div class="container">
+        <a class="navbar-brand js-scroll-trigger" href="../index.html">George Sun</a>
+        <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+          Menu
+          <i class="fa fa-bars"></i>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarResponsive">
+          <ul class="navbar-nav ml-auto">
+            <li class='nav-item'>
+              <a class="nav-link js-scroll-trigger" href="#page-top">HOME</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link js-scroll-trigger" href="#project-info">Project Info</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link js-scroll-trigger" href="#portfolio">Portfolio</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link js-scroll-trigger" href="#about">About</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Intro Heading -->
+    <section>
+      <header class="masthead">
+        <div class="container">
+          <!-- header image -->
+          <a href="">
+            <img id='photo-header' class="img-fluid img-circle" alt="">
+            <div class="intro-text">
+          </a>
+          <!-- header text -->
+          <div class="intro-text">
+            <span id='text-header' class="primary-text"></span>
+            <hr class="star-light">
+            <span id='details-header' class="secondary-text"></span>
+          </div>
+        </div>
+      </header>
+    </section>
+
+    <!-- ==============================================================- -->
+    <!--                         PROJECT CONTENT                         -->
+    <!-- ==============================================================- -->
+    <section id='project-info'>
+      <div class='container'>
+        
+        <!-- ========================= -->
+        <!-- ======= Past Work ======= --> 
+        <!-- ========================= -->
+        <h2 class='text-center logo-header' data-toggle='collapse' data-target='#past-work' style='cursor: pointer'>
+          <i class="fa fa-plus border" aria-hidden="true"></i>
+          Past Work
+        </h2>
+        <hr class="star-secondary"> 
+
+        <div id='past-work' class='row collapse'>         
+
+          <div class='row py-4'>
+            <div class='row'>
+              <div class='col-lg-6'>
+                <h5>Making an 
+                  <a title='instructable air guitar demo link' href="https://www.instructables.com/id/Air-Guitar/" target="_blank">
+                    "air" guitar and drums
+                  </a>
+                </h5>
+                <video controls width="100%">
+                  <source src="./brainstorm/videos/air_instrument_demo_compressed.mp4" type="video/mp4">
+                </video>          
+              </div>
+              
+              <div class='col-lg-6'>
+              <h5>Making a wearables sports tracker</h5>
+                <video controls width='100%'>
+                  <source src="./brainstorm/videos/workout_tracker_demo_compressed.mp4" type="video/mp4">
+                </video>
+              </div>
+            </div>
+            <div class='row'>
+              <div class='col-lg-12'>
+                <p class='content-text'></p>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      
+        <!-- ========================= -->
+        <!-- ====== Inspiration ====== --> 
+        <!-- ========================= -->     
+        <h2 class='text-center logo-header' data-toggle='collapse' data-target='#inspiration' style='cursor: pointer'>
+          <i class="fa fa-plus border" aria-hidden="true"></i>
+          Inspiration
+        </h2>
+        <hr class="star-secondary"> 
+
+        <div id='inspiration' class='row collapse'>
+          
+          <!-- BeBop technologies -->
+          <div class='row py-4'>  <!-- justify-content-lg-center -->
+            <div class='col-lg-8'>
+              <iframe width="100%" height='350' src="https://www.youtube.com/embed/7OHr9IUWG5o" frameborder="0" allowfullscreen></iframe>
+            </div>
+            <div class='col-lg-4'>
+              <h5><a href=https://www.bebopsensors.com/technology/ target="_blank">BEBOP</a> Sensor Technology</h5>
+              <img class='img-centered' src="./brainstorm/images/bebop_company_example.jpg" width='100%'>
+              <p class='content-text'></p>
+            </div>
+          </div>
+
+          <!-- Electrik -->
+          <div class='row py-4'>
+            <div class='col-lg-4'>
+              <h5>Tomographic Touch Reconstruction - <a href="http://www.gierad.com/assets/electrick/electrick.pdf" target="_blank">Electrick</a></h5>
+              <p class='content-text'></p>
+              <img src="./brainstorm/images/electrick_example.jpg" width='100%'>
+            </div>
+            <div class='col-lg-8'>
+              <iframe width="100%" height="350" src="https://www.youtube.com/embed/38h4-5FDdV4" frameborder="0" allowfullscreen></iframe>
+            </div>
+          </div>
+
+          <!-- Virtual DJ, example -->
+          <div class='row py-4'>
+            <div class='col-lg-12'>
+              <div class='row py-1'>
+                <div class='col-lg-2'></div> <!-- spacing -->
+                <div class='col-lg-8'>
+                  <h5>Conventional DJ sets &amp; software</h5>
+                  <iframe width="100%" height='400' src="https://www.youtube.com/embed/Ksnk3Mu3mMU?start=102" frameborder="0" allowfullscreen></iframe>
+                  <p class='content-text'></p>
+                </div>
+                <div class='col-lg-2'></div> <!-- spacing -->                
+              </div>
+             
+              <div class='row py-1'>                
+                <div class='col-lg-2'></div> <!-- spacing -->
+                <div class='col-lg-8'>
+                  <h5>Next generation music control</h5>
+                  <iframe width="100%" height='400' src="https://www.youtube.com/embed/YERtJ-5wlhM" 
+                  frameborder="0" allowfullscreen></iframe>
+                  <p class='content-text'></p>
+                </div>
+                <div class='col-lg-2'></div> <!-- spacing -->                            
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+        <!-- ================================= -->
+        <!-- ====== BACKGROUDN RESEARCH ====== --> 
+        <!-- ================================= -->
+        <h2 class='text-center logo-header' data-toggle='collapse' data-target='#background-research' style='cursor: pointer'>
+          <i class="fa fa-plus border" aria-hidden="true"></i>
+          Background Research
+        </h2>
+        <hr class="star-secondary"> 
+
+        <div id='background-research' class='row collapse'>
+
+          <div class='row py-4'>
+            <div class='col-lg-12'>
+              <h4>Current &amp; Previous work</h4>
+              <h6>In industry</h6>
+            </div>
+            <div class='col-lg-6'>
+              <p class='content-text'></p>
+            </div>
+            <div class='col-lg-6'>
+              <div class='row'>
+                <div class='col-lg-6'>
+                  <p><strong>Tekscan pressure sensors</strong></p>
+                  <img src="./brainstorm/images/tekscan-01.jpg" width='100%'>
+                </div> 
+                <div class='col-lg-6'>
+                  <p><strong>Myo band</strong></p>
+                  <img src="./brainstorm/images/myo-screenshot-02.png" width='100%'>
+                </div>               
+              </div>
+              <div class='row'>
+                <div class='col-lg-6'>
+                  <p><strong>GoGlove for music</strong></p>
+                  <img src="./brainstorm/images/goglove_infographic.png" width='100%' style="padding-top: 25px">
+                </div>
+                <div class='col-lg-6'>
+                  <p><strong>PIR detection</strong></p>
+                  <img class='img-centered' src="./brainstorm/images/PIR-motion-audio-player.jpg" width='70%'>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class='row py-4'>
+            <div class='col-lg-12'>
+              <h6>From hackers</h6>
+            </div>
+            <div class='col-lg-4'>
+              <p class='content-text'></p>
+            </div>
+            <div class='col-lg-4'>
+              <p><strong>From Sam's HTM</strong></p>
+              <div class='row'>
+                <div class='col-lg-12'>
+                  <img src="./brainstorm/images/sam-calisch-foot_sensor-01.png" width='100%'>
+                </div>                
+              </div>
+              <div class='row'>
+                <div class='col-lg-12'>
+                  <img src="./brainstorm/images/sam-calisch-foot_sensor-02.jpg" width='100%'>
+                </div>
+              </div>
+            </div>
+            <div class='col-lg-4'>
+              <p><strong>Imogen Heap</strong></p>
+              <iframe width="100%" height="380" src="https://www.youtube.com/embed/JCeASAdiQ0A?t=54" frameborder="0" gesture="media" allow="encrypted-media" allowfullscreen></iframe>
+            </div>            
+          </div>
+
+          <div class='row py-4'>
+            <div class='col-lg-6'>
+              <div class='row'>
+                <div class='col-lg-12'>
+                  <h4>Using <a href='http://www.kobakant.at/DIY/?p=376'>conductive fabric</a> to measure pressure</h4>
+                  <img src="./documentation/sensors/velostat.png" width='100%'>                  
+                </div>
+              </div>
+              <div class='row'>
+                <div class='col-lg-12'>
+                  <p class='content-text'></p>                  
+                </div>
+              </div>
+            </div>
+            <div class='col-lg-6'>
+              <p class='content-text'></p>
+            </div>
+          </div>          
+
+          <div class='row py-4'>
+            <div class='col-lg-12'>
+              <h4>Interesting fabric fabrication process</h4>
+            </div>
+            <div class='col-lg-6'>
+              <iframe width='100%' height='300' src="https://www.youtube.com/embed/q_RYZEWRA1I/?start=15" frameborder="0" allowfullscreen></iframe>
+            </div>
+            <div class='col-lg-6'>
+              <iframe width='100%' height='300' src="https://www.youtube.com/embed/QDuc0YLFbds/?start=44" frameborder="0" allowfullscreen></iframe>            
+            </div>
+          </div> 
+
+          <div class='row py-4'>
+            <div class='col-lg-12'>
+              <h4>Improved construction - single layer pressure sensing</h4>
+            </div>
+            <div class='col-lg-6'>
+              <p class='content-text'></p>
+            </div>
+            <div class='col-lg-6'>
+              <div class='row'>
+                <div class='col-lg-4'>
+                  <img src="./documentation/sensors/traces-annotated.png" width='100%'>  
+                </div>
+                <div class='col-lg-8'>
+                  <img src="./documentation/sensors/weeded.jpg" width='100%'>
+                </div>                
+              </div>
+              <div class='row'>
+                <div class='col-lg-5'>
+                  <img src="./documentation/sensors/single-example-crop.jpg" width='100%'>
+                </div>
+                <div class='col-lg-7'>
+                  <img src="./documentation/sensors/multi-velostat.jpg" width='100%'>
+                </div>                
+              </div>
+            </div>
+          </div>        
+
+        </div>
+
+        <!-- ================== -->
+        <!-- ====== GOAL ====== --> 
+        <!-- ================== -->
+        <h2 class='text-center logo-header' data-toggle='collapse' data-target='#goal' style='cursor: pointer'>
+          <i class="fa fa-plus border" aria-hidden="true"></i>
+          Goal
+        </h2>
+        <hr class="star-secondary"> 
+
+        <div id='goal' class='row collapse'>
+
+          <div class='row pt-4'>
+            <div class='col-lg-12'>
+              <h4>In summary</h4>
+              <p class='content-text'></p>
+            </div>
+          </div>
+
+          <div class='row pb-4'>
+            <div class='col-lg-12'>
+              <h4>DJ TOUCH <span style='font-size: 12px'>(I would appreciate name recommendations...)</span></h4>              
+            </div>
+            <div class='col-lg-12'>
+              <p class='content-text'></p>              
+            </div>
+          </div>
+
+        </div>
+
+        <!-- ====================== -->
+        <!-- ====== PROGRESS ====== --> 
+        <!-- ====================== -->
+        <h2 class='text-center logo-header' data-toggle='collapse' data-target='#progress' style='cursor: pointer'>
+          <i class="fa fa-plus border" aria-hidden="true"></i>
+          Progress
+        </h2>
+        <hr class="star-secondary"> 
+
+        <div id='progress' class='row collapse'>
+
+          <!-- VINYL CUTTING SHAPES -->
+          <div class='row py-4'>
+            <div class='col-lg-12'>
+              <h4>
+                <a href="https://www.youtube.com/watch?v=s924SDkcvv4">Cutting shapes</a>
+                <span style='font-size: 12px'>(link is not what you think)</span>
+              </h4> 
+              <h6>Sketching</h6>                
+            </div>
+            <div class='col-lg-3'>
+              <p class='content-text'></p>
+            </div>            
+            <div class='col-lg-3' style='padding-top: 10px'>
+              <img src="./documentation/sketches/01-hand-sketch.jpg" width='100%'>
+            </div>
+            <div class='col-lg-4' style='padding-top: 10px'>
+              <img src="./documentation/sketches/01-hand-trace-vs-sketch.png" width='100%'>
+            </div>
+            <div class='col-lg-2' style='padding-top: 10px'>
+              <img src="./documentation/sketches/01-foot-trace.png" width='100%'>
+            </div>
+          </div> 
+
+          <div class='row py-4'>
+            <div class='col-lg-12'>
+              <h6>Hand drawing wearable circuits</h6>
+            </div>
+            <!-- HAND SKETCH -->
+            <div class='row'>
+              <div class='col-lg-3'>
+                <p style='text-align: center'>Copper traces</p>
+                <img src="./documentation/sketches/02-hand-traces.png" width='100%'>
+              </div>
+              <div class='col-lg-3'>
+                <p style='text-align: center'>Velostat</p>
+                <img src="./documentation/sketches/02-hand-velostat.png" width='100%'>
+              </div>              
+              <div class='col-lg-3'>
+                <p style='text-align: center'>Covering</p>
+                <img src="./documentation/sketches/02-hand-cover.png" width='100%'>
+              </div>                            
+              <div class='col-lg-3'>
+                <p style='text-align: center'>Assembled</p>
+                <img src="./documentation/sketches/03-hand-complete.png" width='100%'>
+              </div>
+            </div>
+            <!-- FOOT SKETCH -->
+            <div class='row pt-4'>
+              <div class='col-lg-3'>
+                <img class='img-centered' src="./documentation/sketches/02-foot-traces.png" width='50%'>
+              </div>
+              <div class='col-lg-3'>
+                <img class='img-centered' src="./documentation/sketches/02-foot-velostat.png" width='50%'>
+              </div>              
+              <div class='col-lg-3'>
+                <img class='img-centered' src="./documentation/sketches/02-foot-cover.png" width='50%'>
+              </div>
+              <div class='col-lg-3'>
+                <img class='img-centered' src="./documentation/sketches/03-foot-complete.png" width='50%'>
+              </div>                            
+            </div>
+          </div>
+
+          <div class='row py-4'>
+            <div class='col-lg-12'>
+              <h6>Vinyl Cutting</h6>
+            </div>
+            <div class='col-lg-8'>
+              <div class='row'>
+                <div class='col-lg-6'>
+                  <video controls loop autoplay width='100%'>
+                    <source src="./documentation/vinyl-cut/videos/foot-vinyl-cut-02.mp4" type="video/mp4">
+                  </video>
+                </div>
+                <div class='col-lg-6'>
+                  <img src="./documentation/vinyl-cut/images/02-circuit-hand-01.jpg" width='100%'>
+                </div>
+              </div>
+              <div class='row'>                
+                <div class='col-lg-6'>
+                  <img src="./documentation/vinyl-cut/images/02-circuit-foot-01.jpg" width='100%'>
+                </div>
+                <div class='col-lg-6'>
+                  <img src="./documentation/vinyl-cut/images/03-circuit-hand-soldered-01.jpg" width='100%'>
+                </div>
+              </div>
+              <div class='row'>
+                <div class='col-lg-12'>
+                  <img src="./documentation/vinyl-cut/images/04-hand-foot-circuit-complete-01.jpg" width='100%'>
+                </div>
+              </div>
+            </div>
+            <div class='col-lg-4'>
+              <p class='content-text'></p>
+              <p style='position: absolute; bottom: -20px; left: 0;'>
+                <strong><i>Ta-dah!</i></strong>
+              </p>
+            </div>
+          </div>
+
+          <!-- MICROCONTROLLER DESIGN -->
+          <div class='row py-4'>
+            <div class='col-lg-12'>
+              <h4>Electronics &amp; Microcontroller design</h4>      
+              <h6>Setting up requirements and laying out a schematic</h6>         
+            </div>
+            <div class='col-lg-4'>
+              <p class='content-text'></p>
+            </div>
+            <div class='col-lg-4'>
+              <img src="./documentation/circuit/images/00-board-layout-01.png" width='100%'>
+            </div>
+            <div class='col-lg-4'>
+              <img src="./documentation/circuit/images/00-schematic-layout-01.png" width='100%'>
+            </div>  
+            <div class='col-lg-12'>
+              <p class='content-text'></p>
+            </div>
+          </div>
+
+          <div class='row py-4'>
+            <div class='col-lg-12'>
+              <h6>Milling and prototyping boards</h6>         
+              <p>High precision milling using a 30&deg; <a href='https://en.wikipedia.org/wiki/Jump_wire'>engraving bit</a></p>
+            </div>
+            <div class='col-lg-3'>              
+              <img src="./documentation/circuit/images/01-milling-09.jpg" width='100%'>
+            </div>
+            <div class='col-lg-3'>
+              <div class='row'>
+                <div class='col-lg-12'>
+                    <video controls loop autoplay width='100%'>
+                      <source src="./documentation/circuit/videos/milling-02.mp4" type="video/mp4">
+                    </video>                  
+                </div> 
+              </div>
+              <div class='row'>
+                <div class='col-lg-12'>
+                  <img src="./documentation/circuit/images/01-milling-06.jpg" width='100%'>
+                </div>
+              </div>
+            </div>
+            <div class='col-lg-3'>
+              <img src="./documentation/circuit/images/02a-circuit_new-02.jpg" width='100%'>
+            </div>
+            <div class='col-lg-3'>
+              <!-- push text and image down -->
+              <p class='content-text' style='padding-top: 108px'></p>
+              <img src="./documentation/circuit/images/02c-circuit-new-battery-02.jpg" width='100%'>
+            </div>
+          </div>
+
+          <div class='row py-4'>
+            <div class='col-lg-12'>
+              <h6>Crimping custom <a href='http://www.instructables.com/id/Dupont-Crimp-Tool-Tutorial/'>DuPont cables</a></h6>
+            </div>
+            <div class='col-lg-8'>
+              <div class='row pb-4'>
+                <div class='col-lg-6'>
+                  <div class='row'>
+                    <div class='col-lg-12'>
+                      <img src="./documentation/circuit/images/03-crimping-01.jpg" width='100%'>
+                    </div>
+                  </div>
+                  <div class='row'>
+                    <div class='col-lg-12'>
+                      <img src="./documentation/circuit/images/03-crimping-01b.jpg" width='100%'>
+                    </div>
+                  </div>                  
+                </div>
+                <div class='col-lg-6'>
+                  <img src="./documentation/circuit/images/03-crimping-06.jpg" width='100%'>
+                </div>
+              </div>
+              <div class='row'>
+                <div class='col-lg-6'>
+                  <img src="./documentation/circuit/images/03-crimping-10.jpg" width='100%'>
+                </div>
+                <div class='col-lg-6'>
+                  <img src="./documentation/circuit/images/03-crimping-12.jpg" width='100%'>
+                </div>
+              </div>
+            </div>
+            <div class='col-lg-4'>
+              <p class='content-text'></p>
+            </div>
+          </div>
+
+          <div class='row py-4'>
+            <div class='col-lg-3'></div>
+            <div class='col-lg-6'>
+              <img src="./documentation/circuit/images/04-hand_foot-09.jpg" width='100%'>
+            </div>
+            <div class='col-lg-3'>
+              <p style='position: absolute; bottom: -20px; left: 0'>
+                <strong>They came out nicely!</strong>
+              </p>              
+            </div>
+          </div>
+
+          <!-- MICROCONTROLLER CODE -->
+          <div class='row py-4'>
+            <div class='col-lg-12'>
+              <h4>Micrcontroller code</h4>
+            </div>
+            <div class='col-lg-12'>
+              <p class='content-text'></p>
+            </div>
+            <!-- USART c code -->
+            <div class='col-lg-6'>
+              <div class='row'>
+                <div class='col-lg-12'>
+                  <p><i>USART.h</i></p>
+                  <pre class='line-numbers'>
+                    <code class='language-c'>
+                      <script>
+                        #ifndef UART_H_
+                        #define UART_H_
+
+                        //Declaration of functions
+                        void USART_init(unsigned long, unsigned long);
+                        char get_char(void);
+                        void send_char(char str);
+                        void send_String(char * s);
+
+                        #endif
+                      </script>
+                    </code>
+                  </pre>                  
+                </div>
+              </div>
+              <div class='row'>
+                <div class='col-lg-12'>
+                  <p><i>USART.c</i></p>
+                  <pre class='line-numbers'>
+                    <code class='language-c'>
+                      <script>
+                        #include <avr/io.h>
+
+                        void USART_init(unsigned long BAUDRATE, unsigned long FREQ)
+                        {
+                          // calculate baud prescaler
+                          uint8_t BAUD_PRESCALER =  (((FREQ / (BAUDRATE * 16UL))) - 1); 
+                          UBRR0H = (uint8_t)(BAUD_PRESCALER>>8);
+                          UBRR0L = (uint8_t)(BAUD_PRESCALER);
+                          UCSR0B = (1<<RXEN0) | (1<<TXEN0);
+                          UCSR0C = ((1<<UCSZ00) | (1<<UCSZ01));
+                        }
+
+                        void send_char(char s)
+                        {
+                          while(!(UCSR0A & (1<<UDRE0)));
+                          UDR0 = s;
+                        }
+
+                        void send_String(char *str) {
+                          while(*str) {
+                            send_char(*str);
+                            str++;  
+                          } 
+                        }
+
+                        unsigned char get_char(void)
+                        {
+                          while(!(UCSR0A & (1<<RXC0)));
+                          return UDR0;
+                        }
+                      </script>
+                    </code>
+                  </pre>
+                </div>
+              </div>    
+            </div>
+            <!-- ADC c code -->
+            <div class='col-lg-6'>
+              <div class='row'>
+                <div class='col-lg-12'>
+                  <p><i>ADC.h</i></p>
+                  <pre class='line-numbers'>
+                    <code class='language-c'>
+                      <script>
+                        #ifndef SETUPADC_H_
+                        #define SETUPADC_H_
+
+                        void initADC(void);
+                        uint16_t readADC(uint8_t);
+
+                        #endif /* INITADC_H_ */
+                      </script>
+                    </code>
+                  </pre>                  
+                </div>
+              </div>
+              <div class='row'>
+                <div class='col-lg-12'>
+                  <p><i>ADC.c</i></p>
+                  <pre class='line-numbers'>
+                    <code class='language-c'>
+                      <script>
+                        #include <avr/io.h>
+
+                        void initADC(void)
+                        {
+                          // Aref = AVcc
+                          ADMUX = (1<<REFS0);
+                          
+                          // Enable ADC prescaler
+                          // set to 128 (highest divisor)
+                          ADCSRA = (1<<ADEN) |
+                          (1<<ADPS2) |
+                          (1<<ADPS1) |
+                          (1<<ADPS0);
+                        }
+
+                        uint16_t readADC(uint8_t channel)
+                        {
+                          // select corresponding channel 0-7
+                          // AND with 00000111 (7) will keep values between 0-7 (modulo)
+                          channel &= 0b00000111;
+                          
+                          // clear the ADMUX and AND with the new channel value
+                          // !00001000 = !8 = 0xF8
+                          ADMUX = (ADMUX & 0xF8) | channel;
+                          
+                          // start single conversion manually
+                          // change ADSC bit in ADCSRA to initiate conversion
+                          ADCSRA |= (1<<ADSC);
+                          
+                          // poll for ADC completion
+                          // ADSC goes to zero, perform AND to negate
+                          while(ADCSRA & (1<<ADSC));
+                          
+                          return ADC;
+                        }
+                      </script>
+                    </code>
+                  </pre>
+                </div>
+              </div>    
+            </div>
+          </div>
+
+          <!-- MOLDING CASTING -->
+          <div class='row py-4'>
+            <div class='col-lg-12'>
+              <h4>Molding and casting</h4>
+              <h6>CAD<span style='font-size: 10px'>'ing</span> layered design</h6>
+            </div>
+            <div class='col-lg-3'>
+              <img src="./documentation/mold/images/00_fusionCAD_foot.png" width='100%'>
+            </div>
+            <div class='col-lg-3'>
+              <img src="./documentation/mold/images/00_fusionCAD_hand.png" width='100%'>
+            </div>
+            <div class='col-lg-6'>
+              <div class='row'>
+                <div class='col-lg-6'>
+                  <img src="./documentation/mold/images/00-hand-vCarve-01.jpg" width='100%'>
+                </div>
+                <div class='col-lg-6'>
+                  <img src="./documentation/mold/images/00-Foot-vCarve-01.jpg" width='100%'>
+                </div>            
+              </div>
+              <div class='row'>
+                <div class='col-lg-12'>
+                  <p class='content-text'></p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class='row py-4'>
+            <div class='col-lg-12'>
+              <h6>Milling</h6>
+            </div>
+            <div class='col-lg-3'>
+              <video controls autoplay loop width='100%'>
+                <source src="./documentation/mold/videos/shopbot-hand-01.mp4" type="video/mp4">
+              </video>
+            </div>
+            <div class='col-lg-3'>
+              <img src="./documentation/mold/images/01-hand-shopbot-05.jpg" width='100%'>
+            </div>
+            <div class='col-lg-3'>
+              <img src="./documentation/mold/images/01-hand-foot-shopbot-01.jpg" width='100%'>
+            </div>   
+            <div class='col-lg-3'>
+              <img src="./documentation/mold/images/01-hand-shopbot-circuit-01.jpg" width='100%'>
+            </div>                      
+          </div>
+
+          <div class='row py-4'>
+            <div class='col-lg-12'>
+              <h6>Casting</h6>
+            </div>
+            <div class='col-lg-3'>
+              <p class='content-text'></p>
+            </div>
+            <div class='col-lg-2'>
+              <video controls autoplay loop width='100%'>
+                <source src="./documentation/mold/videos/omoo-degassing-02.mp4" type="video/mp4">
+              </video>
+            </div>
+            <div class='col-lg-2'>
+              <video controls autoplay loop width='100%'>
+                <source src="./documentation/mold/videos/omoo-molding-01.mp4" type="video/mp4">
+              </video>
+            </div>  
+            <div class='col-lg-5'>
+              <img src="./documentation/mold/images/02-molding-omoo-hand_feet-01.jpg" width='100%'>
+            </div>          
+          </div>
+
+          <div class='row py-4'>
+            <div class='col-lg-12'>
+              <h6>Molding - the hard part... bubbles</h6>
+            </div>
+            <div class='col-lg-3'>
+              <p class='content-text'></p>
+            </div>
+            <div class='col-lg-3'>
+              <p>Goopy and bubbly</p>
+              <div class='row'>
+                <div class='col-lg-12'>
+                  <img src="./documentation/mold/images/03-dragonSkin-05.jpg" width='100%'>
+                </div>
+              </div>
+              <div class='row'>
+                <div class='col-lg-12'>
+                  <img src="./documentation/mold/images/04-sortaclear-08.jpg" width='100%'>
+                </div>
+              </div>
+            </div>
+            <div class='col-lg-3'>
+              <p>so many bubbles</p>
+              <img src="./documentation/mold/images/04-sortaclear-07.jpg" width='100%'>
+            </div>
+            <div class='col-lg-3'>
+              <p><strong>AAARRRGHHHHH!!!</strong></p>
+              <video controls autoplay loop width='100%'>
+                <source src="./documentation/mold/videos/dragonskin-02.mp4" type="video/mp4">
+              </video>
+            </div>
+          </div>
+
+          <div class='row py-4'>
+            <div class='col-lg-12'>
+              <h6>Try, try, and try again</h6>
+            </div>
+            <div class='col-lg-12'>
+              <p class='content-text'></p>
+            </div>
+            <div class='col-lg-3'>
+              <img src="./documentation/mold/images/04-waste-02.jpg " width='100%'>
+            </div>
+            <div class='col-lg-3'>
+              <img src="./documentation/mold/images/05-new_dragonskin-01.jpg" width='100%'>
+            </div>
+            <div class='col-lg-3'>
+              <img src="./documentation/mold/images/06-compare-all-04.jpg" width='100%'>
+            </div>
+            <div class='col-lg-3'>
+              <p class='content-text'></p>
+            </div>
+          </div>
+
+          <!-- Laser cutting -->
+          <div class='row py-4'>
+            <div class='col-lg-12'>
+              <h4>Finishing touches</h4>
+              <h6>Laser cutting DJ platform</h6>
+            </div>
+            <div class='col-lg-7'>
+              <div class='row'>
+                <div class='col-lg-12'>
+                  <p class='content-text'></p>                  
+                </div>
+              </div>
+              <div class='row'>
+                <div class='col-lg-12'>
+                  <video autoplay loop controls width='100%'>
+                    <source src="./documentation/laser-cut/videos/01-laser-DJplatform-02.mp4" type="video/mp4">
+                  </video>
+                </div>
+              </div>
+            </div>
+            <div class='col-lg-5'>
+              <div class='row'>
+                <div class='col-lg-12'>
+                  <img src="./documentation/sketches/04-laser_cut-platform-02.png" width='100%'>
+                </div>
+              </div>
+              <div class='row'>
+                <div class='col-lg-12'>
+                  <img src="./documentation/laser-cut/images/01-laser-cut-05.jpg" width='100%'>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Server side coding -->
+          <div class='row py-4'>
+            <div class='col-lg-12'>
+              <h4>Coding the server</h4>
+            </div>
+            <div class='col-lg-12'>
+              <p class='content-text'></p>
+            </div>
+            
+            <div class='col-lg-12'>
+              <div class='row py-4'>
+                <div class='col-lg-1'></div> <!-- spacing -->
+                <div class='col-lg-10'>
+                  <h6>The UI</h6>
+                  <img src="./documentation/server/images/01-UI-01.jpg" width='100%'>
+                </div>
+                <div class='col-lg-1'></div> <!-- spacing -->
+              </div>
+
+              <div class='row py-4'>
+                <div class='col-lg-1'></div>
+                <div class='col-lg-10'>
+                  <h6>A brief demo <span style='font-size: 12px'>(warning: has sound)</span></h6>
+                  <video controls width='100%'>
+                    <source src="./documentation/server/videos/final-DJTouch-demo.mp4" type="video/mp4">
+                  </video>
+                  <p class='content-text'></p>
+                </div>
+                <div class='col-lg-1'></div>              
+              </div>
+            </div>
+
+            <div class='row pb-4'>
+              <div class='col-lg-12'>
+                <h6>Data flowchart</h6>
+              </div>
+              <div class='col-lg-6'>
+                <p class='content-text'></p>
+              </div>
+              <div class='col-lg-6'>
+                <img src="./documentation/sketches/05-server_flowchart.png" width='100%'>
+              </div>
+            </div>
+            <div class='row pb-4'>
+              <div class='col-lg-12'>
+                <p class='content-text'></p>
+              </div>
+            </div>
+              
+          </div> 
+
+        </div>
+
+        <!-- ==================== -->
+        <!-- ====== FINISH ====== --> 
+        <!-- ==================== -->
+        <h2 class='text-center logo-header' data-toggle='collapse' data-target='#finish' style='cursor: pointer'>
+          <i class="fa fa-plus border" aria-hidden="true"></i>
+          Finish
+        </h2>
+        <hr class="star-secondary"> 
+
+        <div id='finish' class='row collapse'>                   
+          
+          <div class='row py-4'>
+            <div class='col-lg-12'>
+              <h4>Things are coming together</h4>
+            </div>
+            <div class='col-lg-12'>
+              <h6>Fitting the sensors onto the DJ platform</h6>
+              <img src="./documentation/coming-together/images/00-vinyl_acrylic-03.jpg" width='100%'>
+            </div>
+          </div>
+
+          <div class='row py-4'>
+            <div class='col-lg-12'>
+              <h6>Adding the molds</h6>
+              <img src="./documentation/coming-together/images/01-mold-pads-01.jpg" width='100%'>
+            </div>
+          </div>
+
+          <div class='row py-4'>
+            <div class='col-lg-12'>
+              <h6>Adding the bluetooth enabled electronics</h6>
+              <img src="./documentation/coming-together/images/03-mold-pads-circuit-01.jpg" width='100%'>
+            </div>
+          </div>   
+
+          <div class='row py-4'>
+            <div class='col-lg-12'>
+              <h6>Making a box with LEDS</h6>
+              <img src="./documentation/coming-together/images/04-DemoDay-02.jpg" width='100%'>
+            </div>
+          </div> 
+
+          <div class='row py-4'>
+            <div class='col-lg-12'>
+              <h4>LET'S PARTY!!!</h4>
+            </div>
+            <div class='col-lg-12'>
+              <div class='row pb-2'>
+                <div class='col-lg-12'>
+                  <h6>Testing it out</h6>
+                  <video controls width='100%'>
+                    <source src="./documentation/coming-together/videos/me-playing.mp4" type="video/mp4">
+                  </video>
+                </div>                
+              </div>
+            </div>
+            <div class='col-lg-12'>
+              <div class='row pt-2'>
+                <div class='col-lg-6'>
+                  <h6>This guy liked it</h6>
+                  <video controls width='100%'>
+                    <source src="./documentation/coming-together/videos/person1-playing.mp4" type="video/mp4">
+                  </video>              
+                </div>
+                <div class='col-lg-6'>
+                  <h6>He liked it too!</h6>
+                  <video controls width='100%'>
+                    <source src="./documentation/coming-together/videos/person2-playing.mp4" type="video/mp4">
+                  </video>              
+                </div>                            
+              </div>
+            </div>
+          </div>
+
+          <div class='row py-4'>
+            <div class='col-lg-12'>
+              <h4 style='text-align: center'>~Thank you!~</h4>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+    <!-- ==============================================================- -->
+    <!--                          END OF CONTENT                         -->
+    <!-- ==============================================================- -->
+
+    <!-- Portfolio Grid Section -->
+    <section id="portfolio">
+      <div class="container">
+        <h2 class="text-center">Portfolio</h2>
+        <hr class="star-secondary">
+        <div id='portfolio-items' class="row">
+        </div>
+      </div>
+    </section>
+
+    <!-- Final Project -->
+    <section id='final-project'>
+      <div class='container'>
+        <h2 class='text-center'>Final Project</h2>
+        <hr class='star-primary'>
+        <div class='row'>
+          <div class='col-lg-3'></div>
+          <div id='final-project-content' class='col-lg-6 portfolio-item'></div>         
+          <div class='col-lg-3'></div>
+        </div>        
+        <hr class='star-primary'>  
+      </div>
+    </section>    
+
+    <!-- About Section -->
+    <section class="success" id="about">
+      <div class="container">
+        <h2 class="text-center">About</h2>
+        <hr class="star-light">
+        <div class="row">
+          <div class="col-lg-5 ml-auto" style="text-align: justify">
+            <p class='about-text'></p>
+          </div>
+          <div class="col-lg-5 mr-auto" style="text-align: justify">
+            <p class='about-text'></p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="text-center">
+      <div class="footer-above">
+        <div class="container">
+          <div class="row">
+            <div class="footer-col col-md-4">
+              <h3>Where to find me</h3>
+              <div id='map' style='height:300px; width:350px'></div>
+            </div>
+            <div class="footer-col col-md-4">
+              <h3>Hobbies</h3>
+              <ul class="list-inline">
+                <li class="list-inline-item">
+                  <a class="btn-social btn-outline" href="#">
+                    <i class="fa fa-fw fa-fake"></i>
+                  </a>
+                </li>
+                <li class="list-inline-item">
+                  <a class="btn-social btn-outline" href="#">
+                    <i class="fa fa-fw fa-fake"></i>
+                  </a>
+                </li>
+                <li class="list-inline-item">
+                  <a class="btn-social btn-outline" href="#">
+                    <i class="fa fa-fw fa-fake"></i>
+                  </a>
+                </li>
+                <li class="list-inline-item">
+                  <a class="btn-social btn-outline" href="#">
+                    <i class="fa fa-fw fa-fake"></i>
+                  </a>
+                </li>
+                <li class="list-inline-item">
+                  <a class="btn-social btn-outline" href="#">
+                    <i class="fa fa-fw fa-fake"></i>
+                  </a>
+                </li>
+              </ul>
+            </div>
+            <div class="footer-col col-md-4">
+              <h3 id='contact-info'>Contact</h3>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="footer-below">
+        <div class="container">
+          <div class="row">
+            <div class="col-lg-12">
+              Copyright &copy; Sun Websites 2017
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <!-- Scroll to Top Button (Only visible on small and extra-small screen sizes) -->
+    <div class="scroll-top d-lg-none">
+      <a class="btn btn-primary js-scroll-trigger" href="#page-top">
+        <i class="fa fa-chevron-up"></i>
+      </a>
+    </div>
+
+    <!-- Bootstrap core JavaScript -->
+    <script src="../lib/jquery/jquery.min.js"></script>
+    <script src="../lib/popper/popper.min.js"></script>
+    <script src="../lib/bootstrap/js/bootstrap.min.js"></script>
+
+    <!-- Plugin JavaScript -->
+    <script src="../lib/jquery-easing/jquery.easing.min.js"></script>
+
+    <!-- Custom scripts for this template -->
+    <script src="../js/freelancer.min.js"></script>    
+
+    <!-- week related descriptions -->
+    <script src='../week1/content-description/description.js' type="text/javascript"></script>
+    <script src='../week2/content-description/description.js' type="text/javascript"></script>
+    <script src='../week3/content-description/description.js' type="text/javascript"></script>
+    <script src='../week4/content-description/description.js' type="text/javascript"></script>
+    <script src='../week5/content-description/description.js' type="text/javascript"></script>
+    <script src='../week6/content-description/description.js' type="text/javascript"></script>
+    <script src='../week7/content-description/description.js' type="text/javascript"></script>
+    <script src='../week8/content-description/description.js' type="text/javascript"></script>
+    <script src='../week9/content-description/description.js' type="text/javascript"></script>
+    <script src='../week10/content-description/description.js' type="text/javascript"></script>
+    <script src='../week11/content-description/description.js' type="text/javascript"></script>
+    <script src='../week12/content-description/description.js' type="text/javascript"></script>
+    <script src='../week13/content-description/description.js' type="text/javascript"></script>
+    <script src='../week14/content-description/description.js' type="text/javascript"></script>
+    <script src='../week-final/content-description/description.js' type="text/javascript"></script>
+    
+    <!-- prism js -->
+    <script src="../lib/prism/prism.js"></script>    
+    
+    <!-- user defined custom scripts -->
+    <script src='../js/user_defined_script.js'></script>
+
+    <!-- week specific javascript file(s) -->
+    <script src='./text.js'></script>
+    
+    <script>
+      $(function() {
+        var dir = ".."
+
+        // populate content
+        changePhotoHeader('final', FINAL, dir)
+        makePortfolio(weeks, weekOBJ, dir)
+        addFinalProject(dir, FINAL)
+
+        // add page specific text
+        addContentText(TEXT)
+
+        // enable collapse
+        // $('.collapse').collapse()
+
+        // collapse event listeners
+        $(".logo-header").on('click', function() {
+          var i_element = $(this).find('i')
+          if(i_element.hasClass('fa-plus')) {
+            i_element.removeClass('fa-plus')
+            i_element.addClass('fa-minus')
+          } 
+          else if (i_element.hasClass('fa-minus')) {
+            i_element.removeClass('fa-minus')
+            i_element.addClass('fa-plus')
+          }
+        })
+      })
+    </script>
+
+    <!-- styling plus/minus icons -->
+    <style>
+      i.border {
+        border-radius: 10px;
+        padding: 5px 10px 5px 10px;
+        background-color: rgba(24,188,156,1); /*hex color = #18BC9C*/
+        color: white;
+      }
+    </style>
+
+  </body>
+</html>

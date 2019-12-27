@@ -1,0 +1,134 @@
+
+testLED.elf:     file format elf32-avr
+
+Sections:
+Idx Name          Size      VMA       LMA       File off  Algn
+  0 .text         00000076  00000000  00000000  00000054  2**1
+                  CONTENTS, ALLOC, LOAD, READONLY, CODE
+  1 .data         00000000  00800060  00800060  000000ca  2**0
+                  CONTENTS, ALLOC, LOAD, DATA
+  2 .comment      00000030  00000000  00000000  000000ca  2**0
+                  CONTENTS, READONLY
+  3 .note.gnu.avr.deviceinfo 0000003c  00000000  00000000  000000fc  2**2
+                  CONTENTS, READONLY
+  4 .debug_aranges 00000038  00000000  00000000  00000138  2**0
+                  CONTENTS, READONLY, DEBUGGING
+  5 .debug_info   000005c1  00000000  00000000  00000170  2**0
+                  CONTENTS, READONLY, DEBUGGING
+  6 .debug_abbrev 00000529  00000000  00000000  00000731  2**0
+                  CONTENTS, READONLY, DEBUGGING
+  7 .debug_line   0000029f  00000000  00000000  00000c5a  2**0
+                  CONTENTS, READONLY, DEBUGGING
+  8 .debug_frame  00000054  00000000  00000000  00000efc  2**2
+                  CONTENTS, READONLY, DEBUGGING
+  9 .debug_str    0000033b  00000000  00000000  00000f50  2**0
+                  CONTENTS, READONLY, DEBUGGING
+ 10 .debug_loc    00000048  00000000  00000000  0000128b  2**0
+                  CONTENTS, READONLY, DEBUGGING
+ 11 .debug_ranges 00000028  00000000  00000000  000012d3  2**0
+                  CONTENTS, READONLY, DEBUGGING
+
+Disassembly of section .text:
+
+00000000 <__vectors>:
+   0:	10 c0       	rjmp	.+32     	; 0x22 <__ctors_end>
+   2:	17 c0       	rjmp	.+46     	; 0x32 <__bad_interrupt>
+   4:	16 c0       	rjmp	.+44     	; 0x32 <__bad_interrupt>
+   6:	15 c0       	rjmp	.+42     	; 0x32 <__bad_interrupt>
+   8:	14 c0       	rjmp	.+40     	; 0x32 <__bad_interrupt>
+   a:	13 c0       	rjmp	.+38     	; 0x32 <__bad_interrupt>
+   c:	12 c0       	rjmp	.+36     	; 0x32 <__bad_interrupt>
+   e:	11 c0       	rjmp	.+34     	; 0x32 <__bad_interrupt>
+  10:	10 c0       	rjmp	.+32     	; 0x32 <__bad_interrupt>
+  12:	0f c0       	rjmp	.+30     	; 0x32 <__bad_interrupt>
+  14:	0e c0       	rjmp	.+28     	; 0x32 <__bad_interrupt>
+  16:	0d c0       	rjmp	.+26     	; 0x32 <__bad_interrupt>
+  18:	0c c0       	rjmp	.+24     	; 0x32 <__bad_interrupt>
+  1a:	0b c0       	rjmp	.+22     	; 0x32 <__bad_interrupt>
+  1c:	0a c0       	rjmp	.+20     	; 0x32 <__bad_interrupt>
+  1e:	09 c0       	rjmp	.+18     	; 0x32 <__bad_interrupt>
+  20:	08 c0       	rjmp	.+16     	; 0x32 <__bad_interrupt>
+
+00000022 <__ctors_end>:
+  22:	11 24       	eor	r1, r1
+  24:	1f be       	out	0x3f, r1	; 63
+  26:	cf e5       	ldi	r28, 0x5F	; 95
+  28:	d1 e0       	ldi	r29, 0x01	; 1
+  2a:	de bf       	out	0x3e, r29	; 62
+  2c:	cd bf       	out	0x3d, r28	; 61
+  2e:	1f d0       	rcall	.+62     	; 0x6e <main>
+  30:	20 c0       	rjmp	.+64     	; 0x72 <_exit>
+
+00000032 <__bad_interrupt>:
+  32:	e6 cf       	rjmp	.-52     	; 0x0 <__vectors>
+
+00000034 <setup>:
+		// note, default is high, pressed is low
+		if (PINB & (1<<PORTB2)) {
+			PORTA &= ~(1<<PORTA7);
+		}
+		else {
+			PORTA |= (1<<PORTA7);
+  34:	d7 9a       	sbi	0x1a, 7	; 26
+  36:	87 b3       	in	r24, 0x17	; 23
+  38:	87 bb       	out	0x17, r24	; 23
+  3a:	c2 9a       	sbi	0x18, 2	; 24
+  3c:	80 e8       	ldi	r24, 0x80	; 128
+  3e:	86 bd       	out	0x26, r24	; 38
+  40:	16 bc       	out	0x26, r1	; 38
+  42:	08 95       	ret
+
+00000044 <blink>:
+}
+
+void blink() {
+	while(1) {
+		// HIGH
+		PORTA |= (1<<PORTA7);
+  44:	df 9a       	sbi	0x1b, 7	; 27
+	#else
+		//round up by default
+		__ticks_dc = (uint32_t)(ceil(fabs(__tmp)));
+	#endif
+
+	__builtin_avr_delay_cycles(__ticks_dc);
+  46:	2f ef       	ldi	r18, 0xFF	; 255
+  48:	88 e0       	ldi	r24, 0x08	; 8
+  4a:	9d e3       	ldi	r25, 0x3D	; 61
+  4c:	21 50       	subi	r18, 0x01	; 1
+  4e:	80 40       	sbci	r24, 0x00	; 0
+  50:	90 40       	sbci	r25, 0x00	; 0
+  52:	e1 f7       	brne	.-8      	; 0x4c <blink+0x8>
+  54:	00 c0       	rjmp	.+0      	; 0x56 <blink+0x12>
+  56:	00 00       	nop
+		_delay_ms(1000);
+		// LOW
+		PORTA &= ~(1<<PORTA7);
+  58:	df 98       	cbi	0x1b, 7	; 27
+  5a:	2f ef       	ldi	r18, 0xFF	; 255
+  5c:	88 e0       	ldi	r24, 0x08	; 8
+  5e:	9d e3       	ldi	r25, 0x3D	; 61
+  60:	21 50       	subi	r18, 0x01	; 1
+  62:	80 40       	sbci	r24, 0x00	; 0
+  64:	90 40       	sbci	r25, 0x00	; 0
+  66:	e1 f7       	brne	.-8      	; 0x60 <blink+0x1c>
+  68:	00 c0       	rjmp	.+0      	; 0x6a <blink+0x26>
+  6a:	00 00       	nop
+  6c:	eb cf       	rjmp	.-42     	; 0x44 <blink>
+
+0000006e <main>:
+		_delay_ms(1000);
+	}
+}
+
+int main(void) {
+	setup();
+  6e:	e2 df       	rcall	.-60     	; 0x34 <setup>
+	blink();
+  70:	e9 df       	rcall	.-46     	; 0x44 <blink>
+
+00000072 <_exit>:
+  72:	f8 94       	cli
+
+00000074 <__stop_program>:
+  74:	ff cf       	rjmp	.-2      	; 0x74 <__stop_program>

@@ -1,0 +1,40 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Atmel Studio Solution File, Format Version 11.00
+VisualStudioVersion = 14.0.23107.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{54F91283-7BC4-4236-8FF9-10F437C3AD48}") = "UART", "UART\UART.cproj", "{DCE6C7E3-EE26-4D79-826B-08594B9AD897}"
+EndProject
+Project("{54F91283-7BC4-4236-8FF9-10F437C3AD48}") = "UART_noASF", "UART_v2\UART_noASF.cproj", "{F07A1AF1-4DD5-47F2-A784-FF65068D995D}"
+EndProject
+Project("{54F91283-7BC4-4236-8FF9-10F437C3AD48}") = "ADC", "ADC\ADC.cproj", "{F9A44675-EDEC-4A44-AF89-56278886B83D}"
+EndProject
+Project("{54F91283-7BC4-4236-8FF9-10F437C3AD48}") = "UART_2_PWM", "UART_2_PWM\UART_2_PWM.cproj", "{8E8D3717-CDDA-4F8C-955B-B3C007934641}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|AVR = Debug|AVR
+		Release|AVR = Release|AVR
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{DCE6C7E3-EE26-4D79-826B-08594B9AD897}.Debug|AVR.ActiveCfg = Debug|AVR
+		{DCE6C7E3-EE26-4D79-826B-08594B9AD897}.Debug|AVR.Build.0 = Debug|AVR
+		{DCE6C7E3-EE26-4D79-826B-08594B9AD897}.Release|AVR.ActiveCfg = Release|AVR
+		{DCE6C7E3-EE26-4D79-826B-08594B9AD897}.Release|AVR.Build.0 = Release|AVR
+		{F07A1AF1-4DD5-47F2-A784-FF65068D995D}.Debug|AVR.ActiveCfg = Debug|AVR
+		{F07A1AF1-4DD5-47F2-A784-FF65068D995D}.Debug|AVR.Build.0 = Debug|AVR
+		{F07A1AF1-4DD5-47F2-A784-FF65068D995D}.Release|AVR.ActiveCfg = Release|AVR
+		{F07A1AF1-4DD5-47F2-A784-FF65068D995D}.Release|AVR.Build.0 = Release|AVR
+		{F9A44675-EDEC-4A44-AF89-56278886B83D}.Debug|AVR.ActiveCfg = Debug|AVR
+		{F9A44675-EDEC-4A44-AF89-56278886B83D}.Debug|AVR.Build.0 = Debug|AVR
+		{F9A44675-EDEC-4A44-AF89-56278886B83D}.Release|AVR.ActiveCfg = Release|AVR
+		{F9A44675-EDEC-4A44-AF89-56278886B83D}.Release|AVR.Build.0 = Release|AVR
+		{8E8D3717-CDDA-4F8C-955B-B3C007934641}.Debug|AVR.ActiveCfg = Debug|AVR
+		{8E8D3717-CDDA-4F8C-955B-B3C007934641}.Debug|AVR.Build.0 = Debug|AVR
+		{8E8D3717-CDDA-4F8C-955B-B3C007934641}.Release|AVR.ActiveCfg = Release|AVR
+		{8E8D3717-CDDA-4F8C-955B-B3C007934641}.Release|AVR.Build.0 = Release|AVR
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

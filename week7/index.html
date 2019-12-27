@@ -1,0 +1,658 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>Project 7</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="../lib/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom fonts for this template -->
+    <link href="../lib/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css">
+    <link href="https://fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic" rel="stylesheet" type="text/css">
+
+    <!-- leafletjs for funny map -->
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.2.0/dist/leaflet.css"
+   integrity="sha512-M2wvCLH6DSRazYeZRIm1JnYyh22purTM+FDB5CsyxtQJYeKq83arPe5wgbNmcFXGqiSH2XR8dT/fJISVA1r/zQ=="
+   crossorigin=""/>
+    <script src="https://unpkg.com/leaflet@1.2.0/dist/leaflet.js"
+   integrity="sha512-lInM/apFSqyy1o6s89K4iQUKg6ppXEgsVxT35HbzUupEVRh2Eu9Wdl4tHj7dZO0s1uvplcYGmt3498TtHq+log=="
+   crossorigin=""></script>
+
+   <!-- prism syntax highlighting -->
+   <link rel="stylesheet" type="text/css" href="../lib/prism/prism.css">
+
+    <!-- Custom styles for this template -->
+    <link href="../css/freelancer.css" rel="stylesheet">
+
+  </head>
+
+  <body id="page-top">
+
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-light fixed-top" id="mainNav">
+      <div class="container">
+        <a class="navbar-brand js-scroll-trigger" href="../index.html">George Sun</a>
+        <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+          Menu
+          <i class="fa fa-bars"></i>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarResponsive">
+          <ul class="navbar-nav ml-auto">
+            <li class='nav-item'>
+              <a class="nav-link js-scroll-trigger" href="#page-top">HOME</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link js-scroll-trigger" href="#project-info">Project Info</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link js-scroll-trigger" href="#portfolio">Portfolio</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link js-scroll-trigger" href="#about">About</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Intro Heading -->
+    <section>
+      <header class="masthead">
+        <div class="container">
+          <!-- header image -->
+          <a href="">
+            <img id='photo-header' class="img-fluid img-circle" alt="">
+            <div class="intro-text">
+          </a>
+          <!-- header text -->
+          <div class="intro-text">
+            <span id='text-header' class="primary-text"></span>
+            <hr class="star-light">
+            <span id='details-header' class="secondary-text"></span>
+          </div>
+        </div>
+      </header>
+    </section>
+
+    <!-- ==============================================================- -->
+    <!--                         PROJECT CONTENT                         -->
+    <!-- ==============================================================- -->
+    <section id='project-info'>
+      <div class='container'>
+        <h2 class='text-center'>Project Info</h2>
+        <hr class="star-secondary">
+
+        <!-- bit manipulation -->
+        <div class='row py-4'>
+          <div class='col-lg-12'>
+            <h4>  
+              Basic Bit Manipulations 
+              <span style='font-size:16px'>
+                by <a href="http://pwillard.com/files/Programming%20101.pdf">Eric Weddington</a>
+              </span>
+            </h4>          
+          </div>  
+          <!-- bit manipulation code -->
+          <div class='col-lg-6'>
+            <div class='row'>
+              <div class='col-lg-12'>
+                <pre>
+                  <code class="language-c">
+                    <script>
+                      #define bit_get(p,m) ((p) &= (m))
+                      #define bit_set(p,m) ((p) |= (m))
+                      #define bit_clear(p,m) ((p) &= ~(m))
+                      #define bit_flip(p,m) ((p) ^= (m))
+                      #define bit_write(c,p,m) (c ? bit_set(p,m) : bit_clear(p,m))
+                      #define BIT(x) (0x01 << (x))
+                      #define LONGBIT(x) ((unsigned long)0x00000001 << (x))                   
+                    </script>
+                  </code>
+                </pre>                
+              </div>
+            </div>
+            <div class='row'>
+              <div class='col-lg-12'>
+                <p class='content-text'></p>
+              </div>
+            </div>
+          </div>            
+          <!-- binary table -->
+          <div class='col-lg-6' data-toggle='tooltip' title='click to expand'>
+            <table class='table' data-toggle='collapse' data-target='#binary-table' style='cursor: pointer'>
+              <thead>
+                <tr>
+                  <td aling='center' colspan=3><h6>Conversion Table</h6></td>
+                </tr>
+                <tr>
+                  <th>decimal</th>
+                  <th>hexidecimal</th>
+                  <th>binary</th>
+                </tr>
+              </thead>              
+              <tbody id='binary-table' class='collapse'>                  
+                <tr>
+                  <th>0</th>
+                  <th>0</th>
+                  <th>0000</th>
+                </tr>
+                <tr>
+                  <td>1</td>
+                  <td>1</td>
+                  <td>0001</td>
+                </tr>
+                <tr>
+                  <td>2</td>
+                  <td>2</td>
+                  <td>0010</td>
+                </tr>
+                <tr>
+                  <td>3</td>
+                  <td>3</td>
+                  <td>0011</td>
+                </tr>
+                <tr>
+                  <td>4</td>
+                  <td>4</td>
+                  <td>0100</td>
+                </tr>
+                <tr>
+                  <td>5</td>
+                  <td>5</td>
+                  <td>0101</td>
+                </tr>
+                <tr>
+                  <td>6</td>
+                  <td>6</td>
+                  <td>0110</td>
+                </tr>
+                <tr>
+                  <td>7</td>
+                  <td>7</td>
+                  <td>0111</td>
+                </tr>
+                <tr>
+                  <td>8</td>
+                  <td>8</td>
+                  <td>1000</td>
+                </tr>
+                <tr>
+                  <td>9</td>
+                  <td>9</td>
+                  <td>1001</td>
+                </tr>
+                <tr>
+                  <td>10</td>
+                  <td>A</td>
+                  <td>1010</td>
+                </tr>
+                <tr>
+                  <td>11</td>
+                  <td>B</td>
+                  <td>1011</td>
+                </tr>
+                <tr>
+                  <td>12</td>
+                  <td>C</td>
+                  <td>1100</td>
+                </tr>
+                <tr>
+                  <td>13</td>
+                  <td>D</td>
+                  <td>1101</td>
+                </tr>
+                <tr>
+                  <td>14</td>
+                  <td>E</td>
+                  <td>1110</td>
+                </tr>
+                <tr>
+                  <td>15</td>
+                  <td>F</td>
+                  <td>1111</td>
+                </tr>
+              </tbody>  
+            </table>
+          </div>
+        </div>
+
+        <!-- understanding fuses -->
+        <div class='row py-4'>
+  		    <div class='col-lg-12'>
+            <h4>Setting up fuses</h4>
+          </div>
+          <div class='col-lg-6'>
+            <div class='row'>
+              <div class='col-lg-12'>
+                <p class='content-text'></p>
+              </div>              
+            </div>
+            <div class='row'>
+              <div class='col-lg-12' data-toggle='tooltip' title='click to expand'>                
+                <table class='table' data-toggle='collapse' data-target='#high-fuse' style='cursor: pointer'>
+                  <thead>
+                    <tr>
+                      <td aling='center' colspan=4><h6>High Fuse Byte</h6></td>
+                    </tr>
+                    <tr>
+                      <th style="text-align:left">Fuse High Byte</th>
+                      <th>Bit No.</th>
+                      <th style="vertical-align:middle">Description</th>
+                      <th style="text-align:left">Default Value (0=programmed)</th>
+                    </tr>                  
+                  </thead>
+                  <tbody id='high-fuse' class='collapse'>                  
+                    <tr>
+                      <td style="text-align:left">RSTDISBL</td>
+                      <td>7</td>
+                      <td style="text-align:left">External reset disable</td>
+                      <td>1</td>
+                    </tr>
+                    <tr>
+                      <td style="text-align:left">DWEN</td>
+                      <td>6</td>
+                      <td style="text-align:left">DebugWire enable</td>
+                      <td>1</td>
+                    </tr>
+                    <tr>
+                      <td style="text-align:left">SPIEN</td>
+                      <td>5</td>
+                      <td style="text-align:left">Enable serial program</td>
+                      <td>0</td>
+                    </tr>
+                    <tr>
+                      <td style="text-align:left">WDTON</td>
+                      <td>4</td>
+                      <td style="text-align:left">Watchdog timer always on</td>
+                      <td>1</td>
+                    </tr>
+                    <tr>
+                      <td style="text-align:left">EESAVE</td>
+                      <td>3</td>
+                      <td style="text-align:left">EEPROM memory is preserved</td>
+                      <td>1</td>
+                    </tr>
+                    <tr>
+                      <td style="text-align:left">BODLEVEL2</td>
+                      <td>2</td>
+                      <td style="text-align:left">Brown-out detection trigger level</td>
+                      <td>1</td>
+                    </tr>
+                    <tr>
+                      <td style="text-align:left">BODLEVEL1</td>
+                      <td>1</td>
+                      <td style="text-align:left">Brown-out detection trigger level</td>
+                      <td>1</td>
+                    </tr>
+                    <tr>
+                      <td style="text-align:left">BODLEVEL0</td>
+                      <td>0</td>
+                      <td style="text-align:left">Brown-out-detection trigger level</td>
+                      <td>1</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+            <div class='row'>
+              <div class='col-lg-12' data-toggle='tooltip' title='click to expand'>
+                <table class='table' data-toggle='collapse' data-target='#low-fuse' style='cursor: pointer'>
+                  <thead>
+                    <tr>
+                      <td align='center' colspan=4><h6>Low Fuse Byte</h6></td>
+                    </tr>
+                    <tr>
+                      <th style='text-align:left'>Fuse Low Byte</th>
+                      <th>Bit no.</th>
+                      <th style='vertical-align:middle'>Description</th>
+                      <th style='text-align:left'>Default Value (0=programmed)</th>
+                    </tr>
+                  </thead>
+                  <tbody id='low-fuse' class='collapse'>
+                    <tr>
+                      <td style='text-align:left'>CKDIV8</td>
+                      <td>7</td>
+                      <td style='text-align:left'>Divide clock by 8</td>
+                      <td>0</td>
+                    </tr>
+                    <tr>
+                      <td style='text-align:left'>CKOUT</td>
+                      <td>6</td>
+                      <td style='text-align:left'>Clock output enable</td>
+                      <td>1</td>
+                    </tr>
+                    <tr>
+                      <td style='text-align:left'>SUT1</td>
+                      <td>5</td>
+                      <td style='text-align:left'>Select start-up time</td>
+                      <td>1</td>
+                    </tr>
+                    <tr>
+                      <td style='text-align:left'>SET0</td>
+                      <td>4</td>
+                      <td style='text-align:left'>Select start-up time</td>
+                      <td>0</td>
+                    </tr>
+                    <tr>
+                      <td style='text-align:left'>CKSEL3</td>
+                      <td>3</td>
+                      <td style='text-align:left'>Select clock source</td>
+                      <td>0</td>
+                    </tr>
+                    <tr>
+                      <td style='text-align:left'>CKSEL2</td>
+                      <td>2</td>
+                      <td style='text-align:left'>Select clock source</td>
+                      <td>0</td>
+                    </tr>
+                    <tr>
+                      <td style='text-align:left'>CKSEL1</td>
+                      <td>1</td>
+                      <td style='text-align:left'>Select clock source</td>
+                      <td>1</td>
+                    </tr>
+                    <tr>
+                      <td style='text-align:left'>CKSEL0</td>
+                      <td>0</td>
+                      <td style='text-align:left'>Select clock source</td>
+                      <td>0</td>
+                    </tr>                    
+                  </tbody>
+                </table>
+              </div>
+            </div>
+
+            <div class='row'>
+              <div class='col-lg-12'>
+                <p class='content-text'></p>
+                <h4 style='text-align: center'>
+                  binary = 01011110 <br>
+                  hexadecimal = 0x5E
+                </h6>  
+                <p class='content-text'></p>              
+              </div>
+            </div>
+          </div>
+
+          <div class='col-lg-6'>
+            <div class='row'>
+              <div class='col-lg-12 mb-4'>
+                <h6>Setting up external clock bits <span style='font-size:12px'>(last row)</span></h6>
+                <img src="./images/CKSEL3-0.png" width='100%'>
+              </div>
+              <div class='col-lg-12 mb-4'>
+                <h6>Bit options for CKSEL3:1</h6>
+                <img src="./images/CKSEL-MODE.png" width='100%'>
+              </div>
+              <div class='col-lg-12 mb-4'>
+                <h6>Bit options for SUT1:0 and CKSEL0</h6>
+                <img src="./images/SUT1-0.png" width='100%'>
+              </div>
+            </div>
+            <div class='row'>
+              <div class='col-lg-12'>
+                <h6>Setting up fuses on <a href="http://www.microchip.com/avr-support/atmel-studio-7">
+                  Atmel Studio
+                </a></h6>
+                <img src="./images/fuses-atmelstudio.jpg" width='100%'>
+              </div>            
+            </div>
+            <div class='row'>
+              <div class='col-lg-12'>
+                <h6 class='mt-4'>Setting up fuses with <a href="https://learn.sparkfun.com/tutorials/pocket-avr-programmer-hookup-guide/using-avrdude">
+                  AVRdude
+                </a></h6>
+                <pre>
+                  <code class='language-c'>
+                    <script text='javascript/text'>
+                      avrdude -p t44 -P usb -c <programmer> -U lfuse:w:0x5E:m
+                    </script>
+                  </code>
+                </pre>                
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- demo video -->
+        <div class='row py-4'>
+          <div class='col-lg-6'>
+            <video autoplay loop controls width='100%'>
+              <source src="./videos/blink.mp4" type="video/mp4">
+            </video>
+          </div>
+          <div class='col-lg-6'>
+            <video autoplay loop controls width='100%'>
+              <source src="./videos/button-blink.mp4" type="video/mp4">
+            </video>
+          </div>
+        </div>
+
+        <!-- UART Hacking -->
+        <div class='row py-4'>
+          <div class='col-lg-12'>
+            <h4>Bit Banging 
+              <a href="http://www.circuitbasics.com/basics-uart-communication/">UART</a>
+            </h4>
+          </div>
+          <div class='col-lg-6'>
+            <img src="./images/UART.png" width='100%'>
+          </div>
+          <div class='col-lg-6'>
+            <h6>Tx/Rx byte</h6>
+            <p class='content-text'></p>
+          </div>
+
+          <div class='col-lg-6'>
+            <pre>
+              <code class='language-c'>
+                <script type="text/javascript">
+                  void send_char(char* PORT, char PIN, char txchar) {
+                    // clear pin
+                    *PORT &= ~PIN;
+                    bit_delay();
+
+                    // loop through txchar bits individually
+                    if (txchar & (1<<0)) {
+                      *PORT |= PIN;
+                    } else {
+                      *PORT &= ~PIN;
+                    }
+                    bit_delay();
+
+                    /* repeat for all bits */
+                  }
+                </script>
+              </code>
+            </pre>
+          </div>
+          <div class='col-lg-6'>
+            <video autoplay loop controls width='100%'>
+              <source src="./videos/button-count.mp4" type="video/mp4">
+            </video>
+          </div>  
+        </div>
+
+        <!-- BLE -->
+        <div class='row py-4'>
+          <div class='col-lg-12'>
+            <h4>UART to BLE</h6>
+          </div>
+          <div class='col-lg-6'>
+            <p class='content-text'></p>
+          </div>
+        </div>
+
+      </div>
+    </section>
+    <!-- ==============================================================- -->
+    <!--                          END OF CONTENT                         -->
+    <!-- ==============================================================- -->
+
+    <!-- Portfolio Grid Section -->
+    <section id="portfolio">
+      <div class="container">
+        <h2 class="text-center">Portfolio</h2>
+        <hr class="star-secondary">
+        <div id='portfolio-items' class="row">
+        </div>
+      </div>
+    </section>
+
+    <!-- Final Project -->
+    <section id='final-project'>
+      <div class='container'>
+        <h2 class='text-center'>Final Project</h2>
+        <hr class='star-primary'>
+        <div class='row'>
+          <div class='col-lg-3'></div>
+          <div id='final-project-content' class='col-lg-6 portfolio-item'></div>         
+          <div class='col-lg-3'></div>
+        </div>        
+        <hr class='star-primary'>  
+      </div>
+    </section>    
+
+    <!-- About Section -->
+    <section class="success" id="about">
+      <div class="container">
+        <h2 class="text-center">About</h2>
+        <hr class="star-light">
+        <div class="row">
+          <div class="col-lg-5 ml-auto" style="text-align: justify">
+            <p class='about-text'></p>
+          </div>
+          <div class="col-lg-5 mr-auto" style="text-align: justify">
+            <p class='about-text'></p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="text-center">
+      <div class="footer-above">
+        <div class="container">
+          <div class="row">
+            <div class="footer-col col-md-4">
+              <h3>Where to find me</h3>
+              <div id='map' style='height:300px; width:350px'></div>
+            </div>
+            <div class="footer-col col-md-4">
+              <h3>Hobbies</h3>
+              <ul class="list-inline">
+                <li class="list-inline-item">
+                  <a class="btn-social btn-outline" href="#">
+                    <i class="fa fa-fw fa-fake"></i>
+                  </a>
+                </li>
+                <li class="list-inline-item">
+                  <a class="btn-social btn-outline" href="#">
+                    <i class="fa fa-fw fa-fake"></i>
+                  </a>
+                </li>
+                <li class="list-inline-item">
+                  <a class="btn-social btn-outline" href="#">
+                    <i class="fa fa-fw fa-fake"></i>
+                  </a>
+                </li>
+                <li class="list-inline-item">
+                  <a class="btn-social btn-outline" href="#">
+                    <i class="fa fa-fw fa-fake"></i>
+                  </a>
+                </li>
+                <li class="list-inline-item">
+                  <a class="btn-social btn-outline" href="#">
+                    <i class="fa fa-fw fa-fake"></i>
+                  </a>
+                </li>
+              </ul>
+            </div>
+            <div class="footer-col col-md-4">
+              <h3 id='contact-info'>Contact</h3>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="footer-below">
+        <div class="container">
+          <div class="row">
+            <div class="col-lg-12">
+              Copyright &copy; Sun Websites 2017
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <!-- Scroll to Top Button (Only visible on small and extra-small screen sizes) -->
+    <div class="scroll-top d-lg-none">
+      <a class="btn btn-primary js-scroll-trigger" href="#page-top">
+        <i class="fa fa-chevron-up"></i>
+      </a>
+    </div>
+
+    <!-- Bootstrap core JavaScript -->
+    <script src="../lib/jquery/jquery.min.js"></script>
+    <script src="../lib/popper/popper.min.js"></script>
+    <script src="../lib/bootstrap/js/bootstrap.min.js"></script>
+
+    <!-- Plugin JavaScript -->
+    <script src="../lib/jquery-easing/jquery.easing.min.js"></script>
+
+    <!-- Custom scripts for this template -->
+    <script src="../js/freelancer.min.js"></script>    
+
+    <!-- week related descriptions -->
+    <script src='../week1/content-description/description.js' type="text/javascript"></script>
+    <script src='../week2/content-description/description.js' type="text/javascript"></script>
+    <script src='../week3/content-description/description.js' type="text/javascript"></script>
+    <script src='../week4/content-description/description.js' type="text/javascript"></script>
+    <script src='../week5/content-description/description.js' type="text/javascript"></script>
+    <script src='../week6/content-description/description.js' type="text/javascript"></script>
+    <script src='../week7/content-description/description.js' type="text/javascript"></script>
+    <script src='../week8/content-description/description.js' type="text/javascript"></script>
+    <script src='../week9/content-description/description.js' type="text/javascript"></script>
+    <script src='../week10/content-description/description.js' type="text/javascript"></script>
+    <script src='../week11/content-description/description.js' type="text/javascript"></script>
+    <script src='../week12/content-description/description.js' type="text/javascript"></script>
+    <script src='../week13/content-description/description.js' type="text/javascript"></script>
+    <script src='../week14/content-description/description.js' type="text/javascript"></script>
+    <script src='../week-final/content-description/description.js' type="text/javascript"></script>
+    
+    <!-- prism js -->
+    <script src="../lib/prism/prism.js"></script>
+    
+    <!-- user defined custom scripts -->
+    <script src='../js/user_defined_script.js'></script>
+
+    <!-- week specific javascript file(s) -->
+    <script src='./text.js'></script>
+    
+    <script>
+      $(function() {
+        var dir = ".."
+
+        // populate content
+        changePhotoHeader('week7', WEEK7, dir)
+        makePortfolio(weeks, weekOBJ, dir)
+        addFinalProject(dir)
+
+        // add page specific text
+        addContentText(TEXT)
+
+        // initialize tooltip
+        $('[data-toggle="tooltip"]').tooltip()
+      })
+    </script>
+
+  </body>
+</html>

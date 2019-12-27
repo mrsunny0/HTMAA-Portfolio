@@ -1,0 +1,391 @@
+
+test.elf:     file format elf32-avr
+
+Sections:
+Idx Name          Size      VMA       LMA       File off  Algn
+  0 .text         000001da  00000000  00000000  00000094  2**1
+                  CONTENTS, ALLOC, LOAD, READONLY, CODE
+  1 .data         00000016  00800060  000001da  0000026e  2**0
+                  CONTENTS, ALLOC, LOAD, DATA
+  2 .bss          00000002  00800076  00800076  00000284  2**0
+                  ALLOC
+  3 .comment      00000030  00000000  00000000  00000284  2**0
+                  CONTENTS, READONLY
+  4 .note.gnu.avr.deviceinfo 0000003c  00000000  00000000  000002b4  2**2
+                  CONTENTS, READONLY
+  5 .debug_aranges 00000038  00000000  00000000  000002f0  2**0
+                  CONTENTS, READONLY, DEBUGGING
+  6 .debug_info   00000b8e  00000000  00000000  00000328  2**0
+                  CONTENTS, READONLY, DEBUGGING
+  7 .debug_abbrev 00000585  00000000  00000000  00000eb6  2**0
+                  CONTENTS, READONLY, DEBUGGING
+  8 .debug_line   00000473  00000000  00000000  0000143b  2**0
+                  CONTENTS, READONLY, DEBUGGING
+  9 .debug_frame  00000070  00000000  00000000  000018b0  2**2
+                  CONTENTS, READONLY, DEBUGGING
+ 10 .debug_str    0000036b  00000000  00000000  00001920  2**0
+                  CONTENTS, READONLY, DEBUGGING
+ 11 .debug_loc    0000076e  00000000  00000000  00001c8b  2**0
+                  CONTENTS, READONLY, DEBUGGING
+ 12 .debug_ranges 00000028  00000000  00000000  000023f9  2**0
+                  CONTENTS, READONLY, DEBUGGING
+
+Disassembly of section .text:
+
+00000000 <__vectors>:
+   0:	10 c0       	rjmp	.+32     	; 0x22 <__ctors_end>
+   2:	2a c0       	rjmp	.+84     	; 0x58 <__bad_interrupt>
+   4:	29 c0       	rjmp	.+82     	; 0x58 <__bad_interrupt>
+   6:	28 c0       	rjmp	.+80     	; 0x58 <__bad_interrupt>
+   8:	27 c0       	rjmp	.+78     	; 0x58 <__bad_interrupt>
+   a:	26 c0       	rjmp	.+76     	; 0x58 <__bad_interrupt>
+   c:	25 c0       	rjmp	.+74     	; 0x58 <__bad_interrupt>
+   e:	24 c0       	rjmp	.+72     	; 0x58 <__bad_interrupt>
+  10:	23 c0       	rjmp	.+70     	; 0x58 <__bad_interrupt>
+  12:	22 c0       	rjmp	.+68     	; 0x58 <__bad_interrupt>
+  14:	21 c0       	rjmp	.+66     	; 0x58 <__bad_interrupt>
+  16:	20 c0       	rjmp	.+64     	; 0x58 <__bad_interrupt>
+  18:	1f c0       	rjmp	.+62     	; 0x58 <__bad_interrupt>
+  1a:	1e c0       	rjmp	.+60     	; 0x58 <__bad_interrupt>
+  1c:	1d c0       	rjmp	.+58     	; 0x58 <__bad_interrupt>
+  1e:	1c c0       	rjmp	.+56     	; 0x58 <__bad_interrupt>
+  20:	1b c0       	rjmp	.+54     	; 0x58 <__bad_interrupt>
+
+00000022 <__ctors_end>:
+  22:	11 24       	eor	r1, r1
+  24:	1f be       	out	0x3f, r1	; 63
+  26:	cf e5       	ldi	r28, 0x5F	; 95
+  28:	d1 e0       	ldi	r29, 0x01	; 1
+  2a:	de bf       	out	0x3e, r29	; 62
+  2c:	cd bf       	out	0x3d, r28	; 61
+
+0000002e <__do_copy_data>:
+  2e:	10 e0       	ldi	r17, 0x00	; 0
+  30:	a0 e6       	ldi	r26, 0x60	; 96
+  32:	b0 e0       	ldi	r27, 0x00	; 0
+  34:	ea ed       	ldi	r30, 0xDA	; 218
+  36:	f1 e0       	ldi	r31, 0x01	; 1
+  38:	02 c0       	rjmp	.+4      	; 0x3e <__SP_H__>
+  3a:	05 90       	lpm	r0, Z+
+  3c:	0d 92       	st	X+, r0
+  3e:	a6 37       	cpi	r26, 0x76	; 118
+  40:	b1 07       	cpc	r27, r17
+  42:	d9 f7       	brne	.-10     	; 0x3a <__do_copy_data+0xc>
+
+00000044 <__do_clear_bss>:
+  44:	20 e0       	ldi	r18, 0x00	; 0
+  46:	a6 e7       	ldi	r26, 0x76	; 118
+  48:	b0 e0       	ldi	r27, 0x00	; 0
+  4a:	01 c0       	rjmp	.+2      	; 0x4e <.do_clear_bss_start>
+
+0000004c <.do_clear_bss_loop>:
+  4c:	1d 92       	st	X+, r1
+
+0000004e <.do_clear_bss_start>:
+  4e:	a8 37       	cpi	r26, 0x78	; 120
+  50:	b2 07       	cpc	r27, r18
+  52:	e1 f7       	brne	.-8      	; 0x4c <.do_clear_bss_loop>
+  54:	ab d0       	rcall	.+342    	; 0x1ac <main>
+  56:	bf c0       	rjmp	.+382    	; 0x1d6 <_exit>
+
+00000058 <__bad_interrupt>:
+  58:	d3 cf       	rjmp	.-90     	; 0x0 <__vectors>
+
+0000005a <put_char>:
+	//
+	bit_delay();
+	half_bit_delay();
+}
+
+void put_char(volatile unsigned char *port, unsigned char pin, char txchar) {
+  5a:	fc 01       	movw	r30, r24
+	// send character in txchar on port pin
+	//    assumes line driver (inverts bits)
+	//
+	// start bit
+	//
+	clear(*port,pin);
+  5c:	90 81       	ld	r25, Z
+  5e:	86 2f       	mov	r24, r22
+  60:	80 95       	com	r24
+  62:	98 23       	and	r25, r24
+  64:	90 83       	st	Z, r25
+	#else
+		//round up by default
+		__ticks_dc = (uint32_t)(ceil(fabs(__tmp)));
+	#endif
+
+	__builtin_avr_delay_cycles(__ticks_dc);
+  66:	98 e3       	ldi	r25, 0x38	; 56
+  68:	9a 95       	dec	r25
+  6a:	f1 f7       	brne	.-4      	; 0x68 <put_char+0xe>
+  6c:	00 c0       	rjmp	.+0      	; 0x6e <put_char+0x14>
+	bit_delay();
+	//
+	// unrolled loop to write data bits
+	//
+	if bit_test(txchar,0)
+  6e:	40 ff       	sbrs	r20, 0
+  70:	04 c0       	rjmp	.+8      	; 0x7a <put_char+0x20>
+	set(*port,pin);
+  72:	90 81       	ld	r25, Z
+  74:	96 2b       	or	r25, r22
+  76:	90 83       	st	Z, r25
+  78:	03 c0       	rjmp	.+6      	; 0x80 <put_char+0x26>
+	else
+	clear(*port,pin);
+  7a:	90 81       	ld	r25, Z
+  7c:	98 23       	and	r25, r24
+  7e:	90 83       	st	Z, r25
+  80:	98 e3       	ldi	r25, 0x38	; 56
+  82:	9a 95       	dec	r25
+  84:	f1 f7       	brne	.-4      	; 0x82 <put_char+0x28>
+  86:	00 c0       	rjmp	.+0      	; 0x88 <put_char+0x2e>
+	bit_delay();
+	if bit_test(txchar,1)
+  88:	41 ff       	sbrs	r20, 1
+  8a:	04 c0       	rjmp	.+8      	; 0x94 <put_char+0x3a>
+	set(*port,pin);
+  8c:	90 81       	ld	r25, Z
+  8e:	96 2b       	or	r25, r22
+  90:	90 83       	st	Z, r25
+  92:	03 c0       	rjmp	.+6      	; 0x9a <put_char+0x40>
+	else
+	clear(*port,pin);
+  94:	90 81       	ld	r25, Z
+  96:	98 23       	and	r25, r24
+  98:	90 83       	st	Z, r25
+  9a:	98 e3       	ldi	r25, 0x38	; 56
+  9c:	9a 95       	dec	r25
+  9e:	f1 f7       	brne	.-4      	; 0x9c <put_char+0x42>
+  a0:	00 c0       	rjmp	.+0      	; 0xa2 <put_char+0x48>
+	bit_delay();
+	if bit_test(txchar,2)
+  a2:	42 ff       	sbrs	r20, 2
+  a4:	04 c0       	rjmp	.+8      	; 0xae <put_char+0x54>
+	set(*port,pin);
+  a6:	90 81       	ld	r25, Z
+  a8:	96 2b       	or	r25, r22
+  aa:	90 83       	st	Z, r25
+  ac:	03 c0       	rjmp	.+6      	; 0xb4 <put_char+0x5a>
+	else
+	clear(*port,pin);
+  ae:	90 81       	ld	r25, Z
+  b0:	98 23       	and	r25, r24
+  b2:	90 83       	st	Z, r25
+  b4:	98 e3       	ldi	r25, 0x38	; 56
+  b6:	9a 95       	dec	r25
+  b8:	f1 f7       	brne	.-4      	; 0xb6 <put_char+0x5c>
+  ba:	00 c0       	rjmp	.+0      	; 0xbc <put_char+0x62>
+	bit_delay();
+	if bit_test(txchar,3)
+  bc:	43 ff       	sbrs	r20, 3
+  be:	04 c0       	rjmp	.+8      	; 0xc8 <put_char+0x6e>
+	set(*port,pin);
+  c0:	90 81       	ld	r25, Z
+  c2:	96 2b       	or	r25, r22
+  c4:	90 83       	st	Z, r25
+  c6:	03 c0       	rjmp	.+6      	; 0xce <put_char+0x74>
+	else
+	clear(*port,pin);
+  c8:	90 81       	ld	r25, Z
+  ca:	98 23       	and	r25, r24
+  cc:	90 83       	st	Z, r25
+  ce:	98 e3       	ldi	r25, 0x38	; 56
+  d0:	9a 95       	dec	r25
+  d2:	f1 f7       	brne	.-4      	; 0xd0 <put_char+0x76>
+  d4:	00 c0       	rjmp	.+0      	; 0xd6 <put_char+0x7c>
+	bit_delay();
+	if bit_test(txchar,4)
+  d6:	44 ff       	sbrs	r20, 4
+  d8:	04 c0       	rjmp	.+8      	; 0xe2 <put_char+0x88>
+	set(*port,pin);
+  da:	90 81       	ld	r25, Z
+  dc:	96 2b       	or	r25, r22
+  de:	90 83       	st	Z, r25
+  e0:	03 c0       	rjmp	.+6      	; 0xe8 <put_char+0x8e>
+	else
+	clear(*port,pin);
+  e2:	90 81       	ld	r25, Z
+  e4:	98 23       	and	r25, r24
+  e6:	90 83       	st	Z, r25
+  e8:	98 e3       	ldi	r25, 0x38	; 56
+  ea:	9a 95       	dec	r25
+  ec:	f1 f7       	brne	.-4      	; 0xea <put_char+0x90>
+  ee:	00 c0       	rjmp	.+0      	; 0xf0 <put_char+0x96>
+	bit_delay();
+	if bit_test(txchar,5)
+  f0:	45 ff       	sbrs	r20, 5
+  f2:	04 c0       	rjmp	.+8      	; 0xfc <put_char+0xa2>
+	set(*port,pin);
+  f4:	90 81       	ld	r25, Z
+  f6:	96 2b       	or	r25, r22
+  f8:	90 83       	st	Z, r25
+  fa:	03 c0       	rjmp	.+6      	; 0x102 <put_char+0xa8>
+	else
+	clear(*port,pin);
+  fc:	90 81       	ld	r25, Z
+  fe:	98 23       	and	r25, r24
+ 100:	90 83       	st	Z, r25
+ 102:	98 e3       	ldi	r25, 0x38	; 56
+ 104:	9a 95       	dec	r25
+ 106:	f1 f7       	brne	.-4      	; 0x104 <put_char+0xaa>
+ 108:	00 c0       	rjmp	.+0      	; 0x10a <put_char+0xb0>
+	bit_delay();
+	if bit_test(txchar,6)
+ 10a:	46 ff       	sbrs	r20, 6
+ 10c:	04 c0       	rjmp	.+8      	; 0x116 <put_char+0xbc>
+	set(*port,pin);
+ 10e:	90 81       	ld	r25, Z
+ 110:	96 2b       	or	r25, r22
+ 112:	90 83       	st	Z, r25
+ 114:	03 c0       	rjmp	.+6      	; 0x11c <put_char+0xc2>
+	else
+	clear(*port,pin);
+ 116:	90 81       	ld	r25, Z
+ 118:	98 23       	and	r25, r24
+ 11a:	90 83       	st	Z, r25
+ 11c:	98 e3       	ldi	r25, 0x38	; 56
+ 11e:	9a 95       	dec	r25
+ 120:	f1 f7       	brne	.-4      	; 0x11e <put_char+0xc4>
+ 122:	00 c0       	rjmp	.+0      	; 0x124 <put_char+0xca>
+	bit_delay();
+	if bit_test(txchar,7)
+ 124:	44 23       	and	r20, r20
+ 126:	24 f4       	brge	.+8      	; 0x130 <put_char+0xd6>
+	set(*port,pin);
+ 128:	80 81       	ld	r24, Z
+ 12a:	86 2b       	or	r24, r22
+ 12c:	80 83       	st	Z, r24
+ 12e:	03 c0       	rjmp	.+6      	; 0x136 <put_char+0xdc>
+	else
+	clear(*port,pin);
+ 130:	90 81       	ld	r25, Z
+ 132:	89 23       	and	r24, r25
+ 134:	80 83       	st	Z, r24
+ 136:	88 e3       	ldi	r24, 0x38	; 56
+ 138:	8a 95       	dec	r24
+ 13a:	f1 f7       	brne	.-4      	; 0x138 <put_char+0xde>
+ 13c:	00 c0       	rjmp	.+0      	; 0x13e <put_char+0xe4>
+	bit_delay();
+	//
+	// stop bit
+	//
+	set(*port,pin);
+ 13e:	80 81       	ld	r24, Z
+ 140:	68 2b       	or	r22, r24
+ 142:	60 83       	st	Z, r22
+ 144:	98 e3       	ldi	r25, 0x38	; 56
+ 146:	9a 95       	dec	r25
+ 148:	f1 f7       	brne	.-4      	; 0x146 <put_char+0xec>
+ 14a:	00 c0       	rjmp	.+0      	; 0x14c <put_char+0xf2>
+ 14c:	88 e3       	ldi	r24, 0x38	; 56
+ 14e:	8a 95       	dec	r24
+ 150:	f1 f7       	brne	.-4      	; 0x14e <put_char+0xf4>
+ 152:	00 c0       	rjmp	.+0      	; 0x154 <put_char+0xfa>
+ 154:	08 95       	ret
+
+00000156 <put_string>:
+	// char delay
+	//
+	bit_delay();
+}
+
+void put_string(volatile unsigned char *port, unsigned char pin, char *str) {
+ 156:	ff 92       	push	r15
+ 158:	0f 93       	push	r16
+ 15a:	1f 93       	push	r17
+ 15c:	cf 93       	push	r28
+ 15e:	df 93       	push	r29
+ 160:	ec 01       	movw	r28, r24
+ 162:	f6 2e       	mov	r15, r22
+ 164:	8a 01       	movw	r16, r20
+	//
+	// print a null-terminated string
+	//
+	static int index;
+	index = 0;
+ 166:	10 92 77 00 	sts	0x0077, r1	; 0x800077 <__data_end+0x1>
+ 16a:	10 92 76 00 	sts	0x0076, r1	; 0x800076 <__data_end>
+	do {
+		put_char(port, pin, str[index]);
+ 16e:	e0 91 76 00 	lds	r30, 0x0076	; 0x800076 <__data_end>
+ 172:	f0 91 77 00 	lds	r31, 0x0077	; 0x800077 <__data_end+0x1>
+ 176:	e0 0f       	add	r30, r16
+ 178:	f1 1f       	adc	r31, r17
+ 17a:	40 81       	ld	r20, Z
+ 17c:	6f 2d       	mov	r22, r15
+ 17e:	ce 01       	movw	r24, r28
+ 180:	6c df       	rcall	.-296    	; 0x5a <put_char>
+		++index;
+ 182:	80 91 76 00 	lds	r24, 0x0076	; 0x800076 <__data_end>
+ 186:	90 91 77 00 	lds	r25, 0x0077	; 0x800077 <__data_end+0x1>
+ 18a:	01 96       	adiw	r24, 0x01	; 1
+ 18c:	90 93 77 00 	sts	0x0077, r25	; 0x800077 <__data_end+0x1>
+ 190:	80 93 76 00 	sts	0x0076, r24	; 0x800076 <__data_end>
+	} while (str[index] != 0);
+ 194:	f8 01       	movw	r30, r16
+ 196:	e8 0f       	add	r30, r24
+ 198:	f9 1f       	adc	r31, r25
+ 19a:	80 81       	ld	r24, Z
+ 19c:	81 11       	cpse	r24, r1
+ 19e:	e7 cf       	rjmp	.-50     	; 0x16e <__stack+0xf>
+}
+ 1a0:	df 91       	pop	r29
+ 1a2:	cf 91       	pop	r28
+ 1a4:	1f 91       	pop	r17
+ 1a6:	0f 91       	pop	r16
+ 1a8:	ff 90       	pop	r15
+ 1aa:	08 95       	ret
+
+000001ac <main>:
+
+int main(void) {
+	//
+	// set clock divider to /1
+	//
+	CLKPR = (1 << CLKPCE);
+ 1ac:	80 e8       	ldi	r24, 0x80	; 128
+ 1ae:	86 bd       	out	0x26, r24	; 38
+	CLKPR = (0 << CLKPS3) | (0 << CLKPS2) | (0 << CLKPS1) | (0 << CLKPS0);
+ 1b0:	16 bc       	out	0x26, r1	; 38
+	//
+	// initialize output pins
+	//
+	set(serial_port, serial_pin_out);
+ 1b2:	d9 9a       	sbi	0x1b, 1	; 27
+	output(serial_direction, serial_pin_out);
+ 1b4:	d1 9a       	sbi	0x1a, 1	; 26
+	//
+	// main loop
+	//
+	while (1) {
+		put_string(&serial_port, serial_pin_out, "HELLO what aufoeauh\n");
+ 1b6:	40 e6       	ldi	r20, 0x60	; 96
+ 1b8:	50 e0       	ldi	r21, 0x00	; 0
+ 1ba:	62 e0       	ldi	r22, 0x02	; 2
+ 1bc:	8b e3       	ldi	r24, 0x3B	; 59
+ 1be:	90 e0       	ldi	r25, 0x00	; 0
+ 1c0:	ca df       	rcall	.-108    	; 0x156 <put_string>
+	#else
+		//round up by default
+		__ticks_dc = (uint32_t)(ceil(fabs(__tmp)));
+	#endif
+
+	__builtin_avr_delay_cycles(__ticks_dc);
+ 1c2:	2f ef       	ldi	r18, 0xFF	; 255
+ 1c4:	88 e0       	ldi	r24, 0x08	; 8
+ 1c6:	9d e3       	ldi	r25, 0x3D	; 61
+ 1c8:	21 50       	subi	r18, 0x01	; 1
+ 1ca:	80 40       	sbci	r24, 0x00	; 0
+ 1cc:	90 40       	sbci	r25, 0x00	; 0
+ 1ce:	e1 f7       	brne	.-8      	; 0x1c8 <main+0x1c>
+ 1d0:	00 c0       	rjmp	.+0      	; 0x1d2 <main+0x26>
+ 1d2:	00 00       	nop
+ 1d4:	f0 cf       	rjmp	.-32     	; 0x1b6 <main+0xa>
+
+000001d6 <_exit>:
+ 1d6:	f8 94       	cli
+
+000001d8 <__stop_program>:
+ 1d8:	ff cf       	rjmp	.-2      	; 0x1d8 <__stop_program>
